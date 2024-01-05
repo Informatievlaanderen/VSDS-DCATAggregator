@@ -1,10 +1,13 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Publish DCAT catalogue on GitHub Pages
+name: Validate a DCAT catalogue.
 
 on:
-  # Runs on pushes targeting the default branch
-  schedule:
-    - cron: '0 4 * * *'
+  pull_request_target:
+    branches:
+      - 'main'
+  push:
+    branches:
+      - 'onboarding/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
