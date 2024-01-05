@@ -1,0 +1,10 @@
+<https://data.vlaanderen.be/shacl/DCAT-AP-VL#hack-1>
+	a sh:PropertyShape ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        
+        sh:description  "De toegankelijkheid voor de dataset."@nl;
+        sh:name         "toegankelijkheid"@nl;
+        sh:path         <http://purl.org/dc/terms/accessRights>;
+        vl:message      [ <https://data.vlaanderen.be/shacl/DCAT-AP-VLnl>
+                          "De toegankelijkheid moet publiek zijn." ];
+        vl:rule         "hack-1" .
