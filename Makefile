@@ -32,8 +32,8 @@ workspace/dcat/%/original: catalogs/% ./bin/download.sh
 	mkdir -p workspace/dcat/$(*F)
 	./bin/download.sh $(^) > $@
 
-schemas/dcatapvl.ttl: schemas/dcatap-normalised.ttl workspace/schema/1.ttl
-	cp workspace/schema/1.ttl schemas/dcatapvl.ttl
+schemas/dcatapvl.ttl: schemas/dcatap-normalised.ttl workspace/schema/1.ttl schemas/metadataportal-additional-checks.ttl
+	cat workspace/schema/1.ttl schemas/metadataportal-additional-checks.ttl > schemas/dcatapvl.ttl
 
 workspace/schema/1.ttl: apache-jena schemas/dcatap-normalised.ttl schemas/changes/1.rq
 	mkdir -p workspace/schema
@@ -44,7 +44,7 @@ schemas/dcatap-normalised.ttl: apache-jena schemas/dcatapvl.jsonld
 
 schemas/dcatapvl.jsonld:
 	mkdir -p schemas
-	wget https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-metadataVoorServices/a223ae23bfc88691e0bd2cf77b9ff1e95a1a6f57/release/dcatapvl.jsonld -O schemas/dcatapvl.jsonld
+	wget https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-metadataVoorServices/validation/release/dcatapvl.jsonld -O schemas/dcatapvl.jsonld
 
 expire:
 	#       Mark all tracked catalogs older than a day for processing.
