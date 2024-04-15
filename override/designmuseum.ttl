@@ -1,0 +1,86 @@
+<https://data.designmuseumgent.be/id/objects/>
+        a       <http://www.w3.org/ns/dcat#Dataset>;
+        <http://data.vlaanderen.be/ns/metadata-dcat#statuut>
+                <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+        <http://purl.org/dc/terms/accessRights>
+                <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        <http://purl.org/dc/terms/description>
+                "@fixme PLACEHOLDER"@en , "@fixme PLACEHOLDER"@nl;
+        <http://purl.org/dc/terms/identifier>
+                "https://data.designmuseumgent.be/id/objects/"^^<http://www.w3.org/2000/01/rdf-schema#Literal>;
+        <http://purl.org/dc/terms/title>
+                "dataset with metadata concerning the published human-made objects of Design Museum Gent"@en , "dataset met metadata van reeds gepubliceerde items uit de collectie van het Design Museum Gent."@nl;
+        <http://www.w3.org/ns/dcat#contactPoint>
+                [ a       <http://www.w3.org/2006/vcard/ns#Kind>;
+                  <http://www.w3.org/2006/vcard/ns#hasEmail>
+                          <mailto:data@designmuseumgent.be>
+                ] .
+
+<https://data.designmuseumgent.be/id/agents/>
+        a       <http://www.w3.org/ns/dcat#Dataset>;
+        <http://data.vlaanderen.be/ns/metadata-dcat#statuut>
+                <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+        <http://purl.org/dc/terms/accessRights>
+                <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        <http://purl.org/dc/terms/description>
+                "@fixme PLACEHOLDER"@en , "@fixme PLACEHOLDER"@nl;
+        <http://purl.org/dc/terms/identifier>
+                "https://data.designmuseumgent.be/id/agents/"^^<http://www.w3.org/2000/01/rdf-schema#Literal>;
+        <http://purl.org/dc/terms/title>
+                "dataset with metadata concerning the agents that are related to the collection of Design Museum Gent"@en , "dataset met metadata rond personen en instellingen (agenten) gerelateerd aan gepubliceerd items uit de collectie van Design Museum Gent"@nl;
+        <http://www.w3.org/ns/dcat#contactPoint>
+                [ a       <http://www.w3.org/2006/vcard/ns#Kind>;
+                  <http://www.w3.org/2006/vcard/ns#hasEmail>
+                          <mailto:data@designmuseumgent.be>
+                ] .
+
+<https://data.designmuseumgent.be/>
+        a       <https://data.designmuseumgent.be/Datasetcatalogus>;
+        <http://purl.org/dc/terms/description>
+                "data catalogue containing datasets describing the collection and program of Design Museum Gent"@en , "data catalogus met datasets die betrekking hebben tot de collectie en programmatie van Design Museum Gent"@nl;
+        <http://purl.org/dc/terms/title>
+                "catalogus Design Museum Gent"@nl;
+        <http://www.w3.org/ns/dcat#contactPoint>
+                [ a       <http://www.w3.org/2006/vcard/ns#Kind>;
+                  <http://www.w3.org/2006/vcard/ns#hasEmail>
+                          <mailto:data@designmuseumgent.be>
+                ];
+        <http://www.w3.org/ns/dcat#dataset>
+                <https://data.designmuseumgent.be/id/exhibitions/billboardseries> , <https://data.designmuseumgent.be/id/agents/> , <https://data.designmuseumgent.be/id/exhibitions/> , <https://data.designmuseumgent.be/id/objects/> .
+
+<https://data.designmuseumgent.be/id/exhibitions/>
+        a       <http://www.w3.org/ns/dcat#Dataset>;
+        <http://data.vlaanderen.be/ns/metadata-dcat#statuut>
+                <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+        <http://purl.org/dc/terms/accessRights>
+                <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        <http://purl.org/dc/terms/description>
+                "@fixme PLACEHOLDER"@en , "@fixme PLACEHOLDER"@nl;
+        <http://purl.org/dc/terms/identifier>
+                "https://data.designmuseumgent.be/id/objects/"^^<http://www.w3.org/2000/01/rdf-schema#Literal>;
+        <http://purl.org/dc/terms/title>
+                "dataset with metadata concerning the exhibitions that are related to the collection of Design Museum Gent"@en , "dataset met metadata rond de tentoonstellingen gerelateerd aan gepubliceerd items uit de collectie van Design Museum Gent."@nl;
+        <http://www.w3.org/ns/dcat#contactPoint>
+                [ a       <http://www.w3.org/2006/vcard/ns#Kind>;
+                  <http://www.w3.org/2006/vcard/ns#hasEmail>
+                          <mailto:data@designmuseumgent.be>
+                ] .
+<https://data.designmuseumgent.be/> a <https://data.designmuseumgent.be/id/exhibitions/billboardseries> .
+
+<https://data.designmuseumgent.be/id/exhibitions/billboardseries>
+        a       <http://www.w3.org/ns/dcat#Dataset>;
+        <http://data.vlaanderen.be/ns/metadata-dcat#statuut>
+                <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+        <http://purl.org/dc/terms/accessRights>
+                <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+        <http://purl.org/dc/terms/description>
+                "@fixme PLACEHOLDER"@en , "@fixme PLACEHOLDER"@nl;
+        <http://purl.org/dc/terms/identifier>
+                "https://data.designmuseumgent.be/id/exhibitions/billboardseries"^^<http://www.w3.org/2000/01/rdf-schema#Literal>;
+        <http://purl.org/dc/terms/title>
+                "dataset with metadata concerning the billboardseries at Design Museum Gent."@en , "dataset met metadata rond billboards die in samenwerking met 019 geproduceerd werden op de banner in de Drabstraat aan Design Museum Gent"@nl;
+        <http://www.w3.org/ns/dcat#contactPoint>
+                [ a       <http://www.w3.org/2006/vcard/ns#Kind>;
+                  <http://www.w3.org/2006/vcard/ns#hasEmail>
+                          <mailto:data@designmuseumgent.be>
+                ] .

@@ -1,0 +1,24 @@
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix v:    <http://www.w3.org/2006/vcard/ns#>
+prefix dcat: <http://www.w3.org/ns/dcat#>
+prefix dct:  <http://purl.org/dc/terms/>
+prefix loc:  <http://www.w3.org/ns/locn#>
+prefix schema: <http://schema.org/>
+
+<htts://data.vlaanderen.be/id/catalog/vsds>
+	a dcat:Catalog ;
+	dct:description "Datesets in de VSDS, beschreven als LDES."@nl;
+	dct:identifier "htts://data.vlaanderen.be/id/catalog/vsds";
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0> ;
+	dct:title "Vlaamse Smart Data Space datasets"@nl ;
+	dcat:contactPoint [
+		a		v:Kind ;
+		a		<http://schema.org/contactPoint> ;
+		v:hasEmail <mailto:vsds@vlaanderen.be> ;
+		v:hasURL "https://www.vlaanderen.be/vlaamse-smart-data-space-portaal" ;
+        v:organizationname "Digitaal Vlaanderen"@nl
+	] ;
+	dct:publisher [
+		a		dct:Agent ;
+		<http://xmlns.com/foaf/0.1/name> "Digitaal Vlaanderen"@nl
+	] .

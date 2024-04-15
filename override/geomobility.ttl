@@ -1,0 +1,88 @@
+@prefix GDI-Vlaanderen-Trefwoorden: <http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/> .
+@prefix access-right: <http://publications.europa.eu/resource/authority/access-right/> .
+@prefix by-location: <https://brugge-ldes.geomobility.eu/observations/by-location/> .
+@prefix by-page: <https://brugge-ldes.geomobility.eu/observations/by-page/> .
+@prefix by-time: <https://brugge-ldes.geomobility.eu/observations/by-time/> .
+@prefix core: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix en: <https://www.geomobility.eu/en/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ldes: <https://w3id.org/ldes/> .
+@prefix metadata-dcat: <http://data.vlaanderen.be/ns/metadata-dcat#> .
+@prefix ns: <http://www.w3.org/2006/vcard/ns#> .
+@prefix observations: <https://brugge-ldes.geomobility.eu/observations/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix tree: <https://w3id.org/tree/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brugge-ldes.geomobility.eu> a dcat:Catalog ;
+    terms:description "All LDES'es related to counting traffic in Flanders by Geomobility"@en,
+        "Alle LDESen ivm. verkeerstellingen in Vlaanderen door Geomobility"@nl ;
+    terms:identifier "9c991baa-b7be-41b3-8678-0c8552279ade"^^rdfs:Literal ;
+    terms:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0> ;
+    terms:publisher [ a terms:Agent ;
+            foaf:name "GeoMobility"@nl ] ;
+    terms:title "Counting traffic in Flanders"@en,
+        "Verkeerstellingen in Vlaanderen"@nl ;
+    dcat:contactPoint <https://geomobility.eu/id/dcat#contact> ;
+    dcat:dataset <https://brugge-ldes.geomobility.eu/observations> ;
+    dcat:service by-location:description,
+        by-page:description,
+        by-time:description .
+
+by-location:description a dcat:DataService ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:description "View by location on the traffic counts in Flanders"@en,
+        "View per locatie van de verkeerstellingen in Vlaanderen"@nl ;
+    terms:identifier "https://brugge-ldes.geomobility.eu/observations/by-location"^^rdfs:Literal ;
+    terms:title "Traffic Count in Flanders by location"@en,
+        "Verkeerstellingen in Vlaanderen per locatie"@nl ;
+    dcat:contactPoint <https://geomobility.eu/id/dcat#contact> ;
+    dcat:endpointDescription <https://semiceu.github.io/LinkedDataEventStreams/> ;
+    dcat:endpointURL observations:by-location ;
+    dcat:servesDataset <https://brugge-ldes.geomobility.eu/observations> .
+
+by-page:description a dcat:DataService ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:description "Default paginated view on the traffic counts in Flanders"@en,
+        "Default gepagineerde view van de verkeerstellingen in Vlaanderen"@nl ;
+    terms:identifier "https://brugge-ldes.geomobility.eu/observations/by-page"^^rdfs:Literal ;
+    terms:title "Traffic Count in Flanders by page"@en,
+        "Verkeerstellingen in Vlaanderen per pagina"@nl ;
+    dcat:contactPoint <https://geomobility.eu/id/dcat#contact> ;
+    dcat:endpointDescription <https://semiceu.github.io/LinkedDataEventStreams/> ;
+    dcat:endpointURL observations:by-page ;
+    dcat:servesDataset <https://brugge-ldes.geomobility.eu/observations> .
+
+by-time:description a dcat:DataService ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:description "View by time on the traffic counts in Flanders"@en,
+        "View op tijdsbasis van de verkeerstellingen in Vlaanderen"@nl ;
+    terms:identifier "https://brugge-ldes.geomobility.eu/observations/by-time"^^rdfs:Literal ;
+    terms:title "Traffic Count in Flanders by time (hierarchical from year to hour)"@en,
+        "Verkeerstellingen in Vlaanderen op tijdsbasis (hierarchisch van jaar tot uur)"@nl ;
+    dcat:contactPoint <https://geomobility.eu/id/dcat#contact> ;
+    dcat:endpointDescription <https://semiceu.github.io/LinkedDataEventStreams/> ;
+    dcat:endpointURL observations:by-time ;
+    dcat:servesDataset <https://brugge-ldes.geomobility.eu/observations> .
+
+<https://brugge-ldes.geomobility.eu/observations> a dcat:Dataset ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:conformsTo ldes:specification,
+        tree:specification ;
+    terms:description "TODO: description of Geomobility LDES for traffic counting in Flanders"@en,
+        "TODO: beschrijving voor Geomobility LDES voor verkeerstellingen in Vlaanderen"@nl ;
+    terms:identifier "https://brugge-ldes.geomobility.eu/observations"^^rdfs:Literal ;
+    terms:title "Geomobility LDES for traffic counting in Flanders"@en,
+        "Geomobility LDES voor verkeerstellingen in Vlaanderen"@nl ;
+    dcat:contactPoint <https://geomobility.eu/id/dcat#contact> .
+
+<https://geomobility.eu/id/dcat#contact> a ns:Kind ;
+    ns:hasEmail <mailto:hello@geomobility.eu> ;
+    foaf:page "https://www.geomobility.eu/en/contact"^^xsd:anyURI .
+

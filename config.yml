@@ -1,0 +1,10 @@
+catalogues:
+  designmuseum:
+    url: "https://data.designmuseumgent.be/"
+    format: "json-ld"
+  marineregions:
+    url: "http://marineregions.org/dcat"
+    format: "turtle"
+  geomobility:
+    url: "https://brugge-ldes.geomobility.eu/"
+    format: "turtle"

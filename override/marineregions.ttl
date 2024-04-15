@@ -1,0 +1,236 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix epos: <https://www.epos-eu.org/epos-dcat-ap#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix http: <http://www.w3.org/2006/http#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+
+# ------------------------------------------------------------------------------
+# The organizations behind this service ----------------------------------------
+# ------------------------------------------------------------------------------
+
+<https://ror.org/0496vr396> a schema:Organization , dct:Agent ;
+  schema:identifier "ISNI:0000000122309672"^^xsd:string ;
+	foaf:name "Flanders Marine Institute"@en ;
+  	schema:legalName "Vlaams Instituut voor de Zee vzw."^^xsd:string ;
+	schema:alternateName "VLIZ" ;
+	schema:address [ a schema:PostalAddress ;
+		schema:streetAddress "Jacobsenstraat 1" ;
+		schema:addressLocality "Ostend" ;
+		schema:postalCode "8400" ;
+    	schema:addressCountry "Belgium" ;
+  	];
+	schema:logo "http://www.vliz.be/sites/vliz.be/themes/vliz/img/logo.png" ;
+	schema:url "https://www.vliz.be/" ;
+	schema:email "info@vliz.be" ;
+.
+
+_:MR-contact a vcard:Kind ;
+	vcard:fn "Marine Regions Data Management team";
+	vcard:organizationname "Vlaams Instituut voor de Zee (VLIZ)";
+	vcard:hasAdress [ a vcard:Address;
+		vcard:streetaddress "Jacobsenstraat 1";
+		vcard:locality "Ostend";
+		vcard:postal-code "8400";
+		vcard:countryname "Belgium"];
+	vcard:hasEmail <mailto:info@marineregions.org>;
+	vcard:hasURL "https://www.marineregions.org/";
+.
+
+# ------------------------------------------------------------------------------
+# The dataset ------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+
+<https://marineinfo.org/id/dataset/1426> a dcat:Dataset ;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+    dct:identifier "doi:10.14284/561"^^xsd:string ;
+	dct:title "Marine Regions gazetteer"@en ;
+	dct:description """The Marine Regions gazetteer is a standard list of marine geographical place names and locations.
+			Objects from different sources (authoritative databases, ecological classifications,...) are integrated into one database.
+			Where possible, the geometry of these sources is included and displayed in the gazetteer.
+			In addition, conceptual information (e.g. type of object) is added to the objects, and they are included in a hierarchy.
+			Each object is assigned a unique ID (MRGID), which allows for unambiguous reference to the objects.
+			The Marine Regions gazetteer is part of the LifeWatch project, and serves as a geographical basis for biodiversity databases, global fisheries research and maritime applications, among other things.
+			In addition, the data was released as a Linked Data Event Stream in July 2021."""@en;
+
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0> ;
+	dct:created "2007-08-16T00:00:00"^^xsd:dateTime ;
+	dct:modified "2022-10-15T00:00:00"^^xsd:dateTime ;
+
+	dct:temporal [ a dct:PeriodOfTime ;
+	  schema:startDate "2010-12-08T00:00:00Z"^^xsd:dateTime ;
+	];
+	dct:spatial [ a dct:Location ;
+		locn:geometry """<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POLYGON ((
+			-180.0^^xsd:float	-90.0^^xsd:float
+			180.0^^xsd:float	90.0^^xsd:float
+		))"""^^gsp:wktLiteral
+	];
+
+	dcat:keyword "marine"@en , "gazetteer"@en , "spatial"@en, "location"@en, "linked data"@en, "semantic"@en, "Charts (maps)"@en, "Geography"@en, "Information systems"@en;
+	dcat:contactPoint _:MR-contact ;
+	dcat:endpointURL "https://www.marineregions.org/gazetteer.php"^^xsd:anyURI;
+	dct:publisher <https://ror.org/0496vr396> ;
+	dct:creator <https://ror.org/0496vr396> ;
+	dct:isPartOf <https://marineinfo.org/id/dataset/6293>;
+.
+
+<https://marineinfo.org/id/dataset/6293> a dcat:Dataset ;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	dct:identifier "doi:10.1080/01490419.2014.902881"^^xsd:string ;
+	dct:title "MarineRegions.org"@en ;
+	dct:description """Geographic Information Systems have become indispensable tools in managing and displaying marine data and information.
+			The purpose of Marine Regions is to create a standard, relational list of geographic names, coupled with information and maps of the geographic location of these features.
+			The objectives are to capture all geographic marine names worldwide, including ocean basins, seas, seamounts, sandbanks, ridges, bays and other marine geographical place names and attributes, and to display univocally the boundaries of marine biogeographic or other managed marine areas in order to facilitate marine data management, marine (bio)geographic research and the management of marine areas.
+			Marine Regions is freely available at MarineRegions.org .
+			The Marine Regions database builds further on an integration of the VLIMAR Gazetteer (place names) and the VLIZ Maritime Boundaries Geodatabase (polygons for sea areas).
+			Funding for the creation of the VLIMAR gazetteer was provided initially through the EU Network of Excellence MarBEF, funding for the further development and maintenance of Marine Regions is provided by Research Foundation - Flanders (FWO) as part of the Belgian contribution to LifeWatch.
+			"""@en;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0> ;
+	dct:created "2019-06-24T00:00:00"^^xsd:dateTime ;
+	dct:modified "2022-10-15T00:00:00"^^xsd:dateTime ;
+	dcat:keyword "Marine"@en, "Biogeography"@en, "Contiguous zones"@en, "Exclusive economic zone"@en, "GIS"@en, "International boundaries"@en, "Law of the sea"@en, "Territorial waters"@en, "World Oceans"@en, "World Waters"@en;
+	dcat:theme [ a skos:Concept;
+      skos:related <https://inspire.ec.europa.eu/theme/br>;
+      skos:prefLabel "Bio-geographical regions"@en
+    ],[ a skos:Concept;
+      skos:related <https://inspire.ec.europa.eu/theme/gn>;
+      skos:prefLabel "Geographical names"@en
+    ];
+	dcat:contactPoint _:MR-contact ;
+	dcat:endpointURL "https://www.marineregions.org"^^xsd:anyURI;
+	dct:publisher <https://ror.org/0496vr396> ;
+	dct:creator <https://ror.org/0496vr396> ;
+.
+
+# ------------------------------------------------------------------------------
+# The formal web-service descriptions ------------------------------------------
+# ------------------------------------------------------------------------------
+
+<https://marineinfo.org/id/dataset/1426#MR_searchpage>
+	dcat:endpointDescription "https://www.marineregions.org/gazetteer.php?p=webservices"^^xsd:anyURI;
+	dct:publisher <https://ror.org/0496vr396> ;
+	dct:identifier "https://marineinfo.org/id/dataset/1426#MR_searchpage";
+	a dcat:DataService ; 
+	#from DCAT 2 description of dataservice:
+	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
+	dcat:endpointURL "https://www.marineregions.org/gazetteer.php?p=search"^^xsd:anyURI;
+	dct:title "Search page gazetteer"@en;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dcat:contactPoint _:MR-contact;
+.
+
+<https://marineinfo.org/id/dataset/1426#MR_browsepage>
+	dcat:endpointDescription "https://www.marineregions.org/gazetteer.php?p=webservices"^^xsd:anyURI;
+	dct:identifier "https://marineinfo.org/id/dataset/1426#MR_browsepage";
+	a dcat:DataService;
+	#from DCAT 2 description of dataservice:
+	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
+	dcat:endpointURL "https://www.marineregions.org/gazetteer.php?p=browser"^^xsd:anyURI;
+	dct:title "Hierarchical tree gazetteer"@en;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dcat:contactPoint _:MR-contact;
+	dct:publisher <https://ror.org/0496vr396> ;
+.
+
+<https://marineinfo.org/id/dataset/1426#MR_RESTservice>
+	dcat:endpointDescription "https://www.marineregions.org/gazetteer.php?p=webservices"^^xsd:anyURI;
+	dct:identifier "https://marineinfo.org/id/dataset/1426#MR_RESTservice";
+	a dcat:DataService;
+	#from DCAT 2 description of dataservice:
+	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
+	dcat:endpointURL "https://www.marineregions.org/rest/"^^xsd:anyURI;
+	dct:title "Marine Regions RESTful service"@en;
+	dct:publisher <https://ror.org/0496vr396> ;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dcat:contactPoint _:MR-contact;
+.
+
+<https://marineinfo.org/id/dataset/1426#MR_SOAPservice>
+	dcat:endpointDescription "https://www.marineregions.org/gazetteer.php?p=webservices"^^xsd:anyURI;
+	dct:identifier "https://marineinfo.org/id/dataset/1426#MR_SOAPservice";
+	a dcat:DataService;
+	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
+	dct:publisher <https://ror.org/0496vr396> ;
+	dcat:endpointURL "https://www.marineregions.org/gazetteer.php?p=soap&wsdl=1"^^xsd:anyURI;
+	dct:title "Marine Regions SOAP service "@en;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dcat:contactPoint _:MR-contact;
+.
+
+<https://marineinfo.org/id/dataset/1426#MR_LDES>
+	dcat:endpointDescription "https://www.marineregions.org/gazetteer.php?p=webservices"^^xsd:anyURI;
+	dct:identifier "https://marineinfo.org/id/dataset/1426#MR_LDES";
+	dct:publisher <https://ror.org/0496vr396> ;
+	a dcat:DataService;
+	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
+	dcat:endpointURL "https://www.marineregions.org/feed"^^xsd:anyURI;
+	dct:conformsTo <https://data.vlaanderen.be/id/concept/dataserviceprotocol/LDES> ;
+	dct:title "Marine Regions Linked Data Event Stream"@en;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dcat:contactPoint _:MR-contact;
+.
+
+<https://marineinfo.org/id/dataset/1426#MR_OGCservice>
+	dcat:endpointDescription "https://www.marineregions.org/gazetteer.php?p=webservices"^^xsd:anyURI;
+	dct:identifier "https://marineinfo.org/id/dataset/1426#MR_OGCservice";
+	a dcat:DataService;
+	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
+	dcat:endpointURL "https://www.marineregions.org/webservices.php"^^xsd:anyURI;
+	dct:publisher <https://ror.org/0496vr396> ;
+	dct:title "Marine Regions OGC service"@en;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dcat:contactPoint _:MR-contact;
+.
+
+<https://marineinfo.org/id/dataset/1426#MR_mregions>
+	dct:identifier "https://marineinfo.org/id/dataset/1426#MR_mregions";
+	a dcat:DataService;
+	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
+	dcat:endpointURL "https://cran.r-project.org/web/packages/mregions/"^^xsd:anyURI;
+	dcat:endpointDescription "https://docs.ropensci.org/mregions/index.html"^^xsd:anyURI;
+	dct:title "R package mregions"@en;
+	dct:publisher <https://ror.org/0496vr396> ;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dcat:contactPoint _:MR-contact;
+.
+
+<https://marineinfo.org/id/dataset/1426#MR_GeoRSS>
+	dcat:endpointDescription "https://www.marineregions.org/gazetteer.php?p=webservices"^^xsd:anyURI;
+	dct:identifier "https://marineinfo.org/id/dataset/1426#MR_GeoRSS";
+	a dcat:DataService;
+	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
+	dcat:endpointURL "https://www.marineregions.org/gazetteer.php?p=rss"^^xsd:anyURI;
+	dct:publisher <https://ror.org/0496vr396> ;
+	dct:title "Marine Regions GeoRSS"@en;
+	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
+	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+	<https://data.vlaanderen.be/ns/metadata-dcat#statuut> <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE>;
+	dcat:contactPoint _:MR-contact;
+.
+
