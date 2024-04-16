@@ -1,5 +1,12 @@
 import cache
-from rdflib import URIRef, Literal, Graph
+from rdflib import URIRef, Literal, Graph, Namespace
+
+def set_namespace(graph: Graph):
+    MDCAT = Namespace("http://data.vlaanderen.be/ns/metadata-dcat#")
+    VCARD = Namespace("http://www.w3.org/2006/vcard/ns#")
+    graph.bind("mdcat", MDCAT)
+    graph.bind("vcard", VCARD)
+    return graph
 
 def shapes_graph():
     shapes = cache.get('shapes_processed')
@@ -102,7 +109,6 @@ def delete_non_dcat_data(graph: Graph):
         """)
     
     ng = Graph()
-    cache.set_namespace(ng)
     for row in results:
         # Serialze and deserialize to get rid of bnodes shared between entities.
         cbd_text = graph.cbd(row.id).serialize(format="turtle")
