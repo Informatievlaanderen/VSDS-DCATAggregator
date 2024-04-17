@@ -8,3 +8,6 @@ catalogues:
   geomobility:
     url: "https://brugge-ldes.geomobility.eu/"
     format: "turtle"
+  cogent:
+    url: "https://apidg.gent.be/opendata/adlib2eventstream/v1/"
+    format: "json-ld"
