@@ -69,4 +69,4 @@ for catalogue_id in config['catalogues']:
     catalog += data_graph
 
 # Store the updated catalog
-catalog.serialize("datasets/catalog.ttl", format="turtle")
+catalog.serialize("datasets/beta.catalog.rdf", format="xml")
