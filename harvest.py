@@ -15,11 +15,12 @@ parser.add_argument("-l", "--log", help = "loglevel, e.g. INFO, DEBUG,...")
 parser.add_argument("-c", "--cache", action='store_true', help = "Enable caching of resources to speed up/offline development")
 args = parser.parse_args()
 logger = logging.getLogger(__name__)
+numeric_level = logging.INFO
 if args.log:
     numeric_level = getattr(logging, args.log.upper(), None)
     if not isinstance(numeric_level, int):
         raise ValueError('Invalid log level: %s' % args.log.upper())
-    logging.basicConfig(level=numeric_level)
+logging.basicConfig(level=numeric_level)
 
 cache.caching_enabled = args.cache
 if cache.caching_enabled:
