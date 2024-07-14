@@ -1,6 +1,9 @@
 run: .venv
 	.venv/bin/python harvest.py
 
+debug: .venv
+	.venv/bin/python harvest.py -l DEBUG
+
 install-requirements: .venv
 	.venv/bin/pip install -r requirements.txt
 

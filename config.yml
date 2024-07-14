@@ -11,3 +11,6 @@ catalogues:
   cogent:
     url: "https://apidg.gent.be/opendata/adlib2eventstream/v1/"
     format: "json-ld"
+  westtoer:
+    url: "https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions"
+    format: "turtle"
