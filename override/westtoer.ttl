@@ -1,0 +1,83 @@
+@prefix GDI-Vlaanderen-Trefwoorden: <https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/> .
+@prefix access-right: <http://publications.europa.eu/resource/authority/access-right/> .
+@prefix custom: <http://example.org/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix id: <https://westtoer.be/id/> .
+@prefix introduction: <https://informatievlaanderen.github.io/VSDS-Tech-Docs/introduction/> .
+@prefix latestView: <https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView/> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix metadata-dcat: <https://data.vlaanderen.be/ns/metadata-dcat#> .
+@prefix ns1: <https://w3id.org/tree#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://westtoer.be/id/shape/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix touristattractions: <https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/> .
+@prefix tree: <https://w3id.org/tree/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///touristattractions/shape> a shacl:NodeShape ;
+    shacl:closed false ;
+    shacl:targetClass schema:TouristAttraction .
+
+<https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions> a dcat:Dataset,
+        ldes:EventStream ;
+    custom:hasDefaultView false ;
+    custom:memberType schema:TouristAttraction ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:conformsTo <https://w3id.org/ldes/specification>,
+        tree:specification ;
+    terms:description "Linked Data Event Stream (LDES) voor Westtoer producten"@nl ;
+    terms:identifier "https://westtoer.be/id/dataset/ldes-producten" ;
+    terms:title "LDES Westtoer producten"@nl ;
+    dcat:contactPoint id:contact ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    ldes:createVersions false ;
+    ldes:timestampPath prov:generatedAtTime ;
+    ldes:versionOfPath terms:isVersionOf ;
+    ns1:shape <file:///touristattractions/shape>,
+        shape:touristattractions ;
+    ns1:view touristattractions:latestView .
+
+latestView:description a dcat:DataService,
+        ns1:ViewDescription ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:description "Westtoer producten Linked Data Event Stream"@nl ;
+    terms:identifier "https://westtoer.be/id/dataservice/touristattractions/latestView" ;
+    terms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    terms:title "Westtoer producten Linked Data Event Stream"@nl ;
+    dcat:contactPoint id:contact ;
+    dcat:endpointDescription introduction:LDES_server ;
+    dcat:endpointURL touristattractions:latestView ;
+    dcat:servesDataset <https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions> ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    ldes:retentionPolicy [ a ldes:LatestVersionSubset ;
+            ldes:amount 1 ] ;
+    ns1:fragmentationStrategy () ;
+    ns1:pageSize "100"^^xsd:int .
+
+<https://semiceu.github.io/LinkedDataEventStreams/> a rdfs:Resource .
+
+<https://w3id.org/ldes/specification> a terms:Standard .
+
+tree:specification a terms:Standard .
+
+shape:touristattractions a shacl:NodeShape ;
+    shacl:closed false ;
+    shacl:targetClass schema:TouristAttraction .
+
+touristattractions:latestView a rdfs:Resource,
+        ns1:Node ;
+    ns1:viewDescription latestView:description .
+
+id:contact a schema1:contactPoint,
+        vcard:Kind ;
+    vcard:hasEmail <mailto:info@westtoer.be> ;
+    foaf:page "https://www.westtoer.be/over-ons/contact"^^xsd:anyURI .
+
