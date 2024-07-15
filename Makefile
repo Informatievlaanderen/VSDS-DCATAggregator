@@ -15,4 +15,4 @@ freeze-requirements: .venv
 
 
 
-.PHONY: install-requirements freeze-requirements 
+.PHONY: install-requirements freeze-requirements cache run debug

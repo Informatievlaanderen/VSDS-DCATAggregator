@@ -1,0 +1,128 @@
+@prefix : <https://telraam.net/id/dcat#> .
+@prefix GDI-Vlaanderen-Trefwoorden: <http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/> .
+@prefix access-right: <http://publications.europa.eu/resource/authority/access-right/> .
+@prefix by-location: <https://telraam-api.net/ldes/observations/by-location/> .
+@prefix by-page: <https://telraam-api.net/ldes/observations/by-page/> .
+@prefix by-time: <https://telraam-api.net/ldes/observations/by-time/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ldes: <https://telraam-api.net/ldes/> .
+@prefix metadata-dcat: <http://data.vlaanderen.be/ns/metadata-dcat#> .
+@prefix ns1: <https://w3id.org/ldes#> .
+@prefix observations: <https://telraam-api.net/ldes/observations/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix tree: <https://w3id.org/tree#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+by-location:description a dcat:DataService,
+        tree:ViewDescription ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:description "View by location on the traffic counts in Flanders"@en,
+        "View per locatie van de verkeersmetingen in Vlaanderen"@nl ;
+    terms:identifier "https://telraam-api.net/ldes/observations/by-location"^^rdfs:Literal ;
+    terms:title "Traffic Count in Flanders by location"@en,
+        "Verkeersmetingen in Vlaanderen per locatie"@nl ;
+    dcat:contactPoint :contact ;
+    dcat:endpointDescription <https://semiceu.github.io/LinkedDataEventStreams/> ;
+    dcat:endpointURL observations:by-location ;
+    dcat:servesDataset ldes:observations ;
+    ns1:retentionPolicy [ a ns1:DurationAgoPolicy ;
+            tree:value "P5Y"^^xsd:duration ] ;
+    tree:fragmentationStrategy ( [ a tree:GeospatialFragmentation ;
+                tree:fragmentationPath "http://www.opengis.net/ont/geosparql#asWKT" ;
+                tree:maxZoom "14" ] ) ;
+    tree:pageSize "500"^^xsd:int .
+
+by-page:description a dcat:DataService,
+        tree:ViewDescription ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:description "Default paginated view on the traffic counts in Flanders"@en,
+        "Default gepagineerde view van de verkeersmetingen in Vlaanderen"@nl ;
+    terms:identifier "https://telraam-api.net/ldes/observations/by-page"^^rdfs:Literal ;
+    terms:title "Traffic Count in Flanders by page"@en,
+        "Verkeersmetingen in Vlaanderen per pagina"@nl ;
+    dcat:contactPoint :contact ;
+    dcat:endpointDescription <https://semiceu.github.io/LinkedDataEventStreams/> ;
+    dcat:endpointURL observations:by-page ;
+    dcat:servesDataset ldes:observations ;
+    ns1:retentionPolicy [ a ns1:DurationAgoPolicy ;
+            tree:value "P5Y"^^xsd:duration ] ;
+    tree:fragmentationStrategy () ;
+    tree:pageSize "500"^^xsd:int .
+
+by-time:description a dcat:DataService,
+        tree:ViewDescription ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:description "View by time on the traffic counts in Flanders"@en,
+        "View op tijdsbasis van de verkeersmetingen in Vlaanderen"@nl ;
+    terms:identifier "https://telraam-api.net/ldes/observations/by-time"^^rdfs:Literal ;
+    terms:title "Traffic Count in Flanders by time (hierarchical from year to hour)"@en,
+        "Verkeersmetingen in Vlaanderen op tijdsbasis (hierarchisch van jaar tot uur)"@nl ;
+    dcat:contactPoint :contact ;
+    dcat:endpointDescription <https://semiceu.github.io/LinkedDataEventStreams/> ;
+    dcat:endpointURL observations:by-time ;
+    dcat:servesDataset ldes:observations ;
+    ns1:retentionPolicy [ a ns1:DurationAgoPolicy ;
+            tree:value "P5Y"^^xsd:duration ] ;
+    tree:fragmentationStrategy ( [ a tree:HierarchicalTimeBasedFragmentation ;
+                tree:fragmentationPath "http://www.w3.org/ns/prov#generatedAtTime" ;
+                tree:maxGranularity "hour" ] ) ;
+    tree:pageSize "500"^^xsd:int .
+
+<https://w3id.org/ldes/specification> a terms:Standard .
+
+<https://w3id.org/tree/specification> a terms:Standard .
+
+observations:by-location a rdfs:Resource,
+        tree:Node ;
+    tree:viewDescription by-location:description .
+
+observations:by-page a rdfs:Resource,
+        tree:Node ;
+    tree:viewDescription by-page:description .
+
+observations:by-time a rdfs:Resource,
+        tree:Node ;
+    tree:viewDescription by-time:description .
+
+<https://semiceu.github.io/LinkedDataEventStreams/> a rdfs:Resource .
+
+ldes:observations a dcat:Dataset,
+        ns1:EventStream ;
+    metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    terms:accessRights access-right:PUBLIC ;
+    terms:conformsTo <https://w3id.org/ldes/specification>,
+        <https://w3id.org/tree/specification> ;
+    terms:description "TODO: description of Telraam LDES for traffic counting in Flanders"@en,
+        "TODO: beschrijving voor Telraam LDES voor verkeersmetingen in Vlaanderen"@nl ;
+    terms:identifier "https://telraam-api.net/ldes/observations"^^rdfs:Literal ;
+    terms:title "Telraam LDES for traffic counting in Flanders"@en,
+        "Telraam LDES voor verkeersmetingen in Vlaanderen"@nl ;
+    dcat:contactPoint :contact ;
+    ns1:timestampPath prov:generatedAtTime ;
+    ns1:versionOfPath terms:isVersionOf ;
+    tree:shape [ a shacl:NodeShape ] ;
+    tree:view observations:by-location,
+        observations:by-page,
+        observations:by-time .
+
+GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE a skos:Concept ;
+    skos:prefLabel "Vlaamse Open data Service"@nl .
+
+access-right:PUBLIC a skos:Concept ;
+    skos:prefLabel "openbaar"@nl .
+
+:contact a schema:contactPoint,
+        vcard:Kind ;
+    vcard:hasEmail <mailto:info@telraam.net> ;
+    foaf:page "https://telraam.net/en/contact-us"^^xsd:anyURI .

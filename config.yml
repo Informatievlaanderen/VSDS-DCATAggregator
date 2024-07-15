@@ -14,3 +14,6 @@ catalogues:
   westtoer:
     url: "https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions"
     format: "turtle"
+  telraam:
+    url: "https://telraam-api.net/ldes/observations"
+    format: "turtle"
