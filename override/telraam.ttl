@@ -102,13 +102,15 @@ ldes:observations a dcat:Dataset,
     metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
     terms:accessRights access-right:PUBLIC ;
     terms:conformsTo <https://w3id.org/ldes/specification>,
-        <https://w3id.org/tree/specification> ;
+        <https://w3id.org/tree/specification>,
+        <https://data.vlaanderen.be/id/concept/dataserviceprotocol/LDES> ;
     terms:description "TODO: description of Telraam LDES for traffic counting in Flanders"@en,
         "TODO: beschrijving voor Telraam LDES voor verkeersmetingen in Vlaanderen"@nl ;
     terms:identifier "https://telraam-api.net/ldes/observations"^^rdfs:Literal ;
     terms:title "Telraam LDES for traffic counting in Flanders"@en,
         "Telraam LDES voor verkeersmetingen in Vlaanderen"@nl ;
     dcat:contactPoint :contact ;
+    dcat:keyword "LDES"@en ;
     ns1:timestampPath prov:generatedAtTime ;
     ns1:versionOfPath terms:isVersionOf ;
     tree:shape [ a shacl:NodeShape ] ;

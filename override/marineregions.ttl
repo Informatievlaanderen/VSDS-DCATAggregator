@@ -77,7 +77,7 @@ _:MR-contact a vcard:Kind ;
 		))"""^^gsp:wktLiteral
 	];
 
-	dcat:keyword "marine"@en , "gazetteer"@en , "spatial"@en, "location"@en, "linked data"@en, "semantic"@en, "Charts (maps)"@en, "Geography"@en, "Information systems"@en;
+	dcat:keyword "marine"@en , "gazetteer"@en , "spatial"@en, "location"@en, "linked data"@en, "semantic"@en, "Charts (maps)"@en, "Geography"@en, "Information systems"@en, "LDES"@en;
 	dcat:contactPoint _:MR-contact ;
 	dcat:endpointURL "https://www.marineregions.org/gazetteer.php"^^xsd:anyURI;
 	dct:publisher <https://ror.org/0496vr396> ;
@@ -100,7 +100,7 @@ _:MR-contact a vcard:Kind ;
 	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0> ;
 	dct:created "2019-06-24T00:00:00"^^xsd:dateTime ;
 	dct:modified "2022-10-15T00:00:00"^^xsd:dateTime ;
-	dcat:keyword "Marine"@en, "Biogeography"@en, "Contiguous zones"@en, "Exclusive economic zone"@en, "GIS"@en, "International boundaries"@en, "Law of the sea"@en, "Territorial waters"@en, "World Oceans"@en, "World Waters"@en;
+	dcat:keyword "Marine"@en, "Biogeography"@en, "Contiguous zones"@en, "Exclusive economic zone"@en, "GIS"@en, "International boundaries"@en, "Law of the sea"@en, "Territorial waters"@en, "World Oceans"@en, "World Waters"@en, "LDES"@en;
 	dcat:theme [ a skos:Concept;
       skos:related <https://inspire.ec.europa.eu/theme/br>;
       skos:prefLabel "Bio-geographical regions"@en
@@ -184,7 +184,7 @@ _:MR-contact a vcard:Kind ;
 	a dcat:DataService;
 	dcat:servesDataset <https://marineinfo.org/id/dataset/1426>;
 	dcat:endpointURL "https://www.marineregions.org/feed"^^xsd:anyURI;
-	dct:conformsTo <https://data.vlaanderen.be/id/concept/dataserviceprotocol/LDES> ;
+	dct:conformsTo <https://data.vlaanderen.be/id/concept/dataserviceprotocol/LDES>, <https://w3id.org/ldes/specification> ;
 	dct:title "Marine Regions Linked Data Event Stream"@en;
 	dct:license <https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0>;
 	dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;

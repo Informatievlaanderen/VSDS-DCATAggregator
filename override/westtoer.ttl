@@ -41,6 +41,7 @@
     ldes:createVersions false ;
     ldes:timestampPath prov:generatedAtTime ;
     ldes:versionOfPath terms:isVersionOf ;
+    dcat:keyword "LDES"@en ;
     ns1:shape <file:///touristattractions/shape>,
         shape:touristattractions ;
     ns1:view touristattractions:latestView .
@@ -55,6 +56,7 @@ latestView:description a dcat:DataService,
     dcat:contactPoint id:contact ;
     dcat:endpointDescription introduction:LDES_server ;
     dcat:endpointURL touristattractions:latestView ;
+    dcat:keyword "LDES"@en ;
     dcat:servesDataset <https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions> ;
     metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
     ldes:retentionPolicy [ a ldes:LatestVersionSubset ;

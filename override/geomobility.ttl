@@ -72,6 +72,7 @@ by-time:description a dcat:DataService ;
 
 <https://brugge-ldes.geomobility.eu/observations> a dcat:Dataset ;
     metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
+    dcat:keyword "LDES"@en ;
     terms:accessRights access-right:PUBLIC ;
     terms:conformsTo ldes:specification,
         tree:specification ;
