@@ -42,6 +42,7 @@ for catalogue_id in config['catalogues']:
     try:
         data_graph = cache.fetch_graph_with_cache(catalogue['url'], catalogue['format'], catalogue_id)
         data_graph = dcat.delete_non_dcat_data(data_graph)
+        data_graph = dcat.delete_redundant_languages(data_graph)
         data_graph = dcat.add_catalog_membership(data_graph)
 
         # Validate

@@ -116,6 +116,47 @@ def delete_non_dcat_data(graph: Graph):
         ng += cbd
     return ng
 
+# Filter out non dutch language triples.
+# This is bad as we're removing valuable data, but it is needed as
+# datavindplaats can't handle the translations properly.
+def delete_redundant_languages(graph: Graph):
+    # Filter out all non-dutch language literals if a dutch version exists.
+    graph.update("""
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    DELETE {?subject ?predicate ?object }
+    WHERE {
+        ?subject ?predicate ?object .
+        FILTER(
+            LANG(?object) != "nl" &&
+            LANG(?object) != "" &&  # Ensure we only target literals with language tags
+            EXISTS {
+                ?subject ?predicate ?nlObject .
+                FILTER(LANG(?nlObject) = "nl")
+            }
+        )
+    }
+    """)
+    # Fallback in case of translations, but there is no dutch version.
+    # Filter out all non-english language literals if a english version exists.
+    graph.update("""
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+    DELETE {?subject ?predicate ?object }
+    WHERE {
+        ?subject ?predicate ?object .
+        FILTER(
+            LANG(?object) != "en" &&
+            LANG(?object) != "" &&  # Ensure we only target literals with language tags
+            EXISTS {
+                ?subject ?predicate ?enObject .
+                FILTER(LANG(?enObject) = "en")
+            }
+        )
+    }
+    """)
+    return graph
+
 # Make each dataset and dataservice a member of the shared (vsds) catalog.
 def add_catalog_membership(graph: Graph):
     graph.update(
