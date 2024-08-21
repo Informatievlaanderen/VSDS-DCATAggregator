@@ -1,792 +1,290 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:schema1="http://schema.org/"
-  xmlns:dcat="http://www.w3.org/ns/dcat#"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-  xmlns:v="http://www.w3.org/2006/vcard/ns#"
-  xmlns:dct="http://purl.org/dc/terms/"
-  xmlns:schema="https://schema.org/"
-  xmlns:ns1="https://w3id.org/tree#"
-  xmlns:ns2="http://example.org/"
-  xmlns:ns3="https://w3id.org/ldes#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:sh="http://www.w3.org/ns/shacl#"
-  xmlns:foaf="http://xmlns.com/foaf/0.1/"
-  xmlns:mdcat="http://data.vlaanderen.be/ns/metadata-dcat#"
-  xmlns:loc="http://www.w3.org/ns/locn#"
-  xmlns:ns4="https://data.vlaanderen.be/ns/metadata-dcat#"
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:loc="http://www.w3.org/ns/locn#"
+   xmlns:mdcat="http://data.vlaanderen.be/ns/metadata-dcat#"
+   xmlns:ns1="https://w3id.org/ldes#"
+   xmlns:ns2="https://w3id.org/tree#"
+   xmlns:ns3="http://example.org/"
+   xmlns:ns4="https://data.vlaanderen.be/ns/metadata-dcat#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:schema1="http://schema.org/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:v="http://www.w3.org/2006/vcard/ns#"
 >
-  <dcat:Catalog rdf:about="htts://data.vlaanderen.be/id/catalog/vsds">
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426#MR_RESTservice">
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/rest/</dcat:endpointURL>
+    <dcat:contactPoint rdf:nodeID="n15e36d128de048e482c6538eda728f38b1"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:title xml:lang="en">Marine Regions RESTful service</dct:title>
+    <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_RESTservice</dct:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.designmuseumgent.be/id/agents/">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcat:contactPoint rdf:nodeID="n1ded9c19d10340af8a592cc5e060b0bab1"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://data.designmuseumgent.be/id/agents/</dct:identifier>
+    <mdcat:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:description xml:lang="nl">@fixme PLACEHOLDER</dct:description>
+    <dct:title xml:lang="nl">dataset met metadata rond personen en instellingen (agenten) gerelateerd aan gepubliceerd items uit de collectie van Design Museum Gent</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="htts://data.vlaanderen.be/id/catalog/vsds">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
     <dct:description xml:lang="nl">Datesets in de VSDS, beschreven als LDES.</dct:description>
     <dct:identifier>htts://data.vlaanderen.be/id/catalog/vsds</dct:identifier>
     <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
     <dct:title xml:lang="nl">Vlaamse Smart Data Space datasets</dct:title>
-    <dcat:contactPoint>
-      <v:Kind rdf:nodeID="n81215db8f6b44672aad8028cbaffc2fcb1">
-        <rdf:type rdf:resource="http://schema.org/contactPoint"/>
-        <v:hasEmail rdf:resource="mailto:vsds@vlaanderen.be"/>
-        <v:hasURL>https://www.vlaanderen.be/vlaamse-smart-data-space-portaal</v:hasURL>
-        <v:organizationname xml:lang="nl">Digitaal Vlaanderen</v:organizationname>
-      </v:Kind>
-    </dcat:contactPoint>
-    <dct:publisher>
-      <dct:Agent rdf:nodeID="n81215db8f6b44672aad8028cbaffc2fcb2">
-        <foaf:name xml:lang="nl">Digitaal Vlaanderen</foaf:name>
-      </dct:Agent>
-    </dct:publisher>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://data.designmuseumgent.be/id/objects/">
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <mdcat:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:description xml:lang="nl">@fixme PLACEHOLDER</dct:description>
-        <dct:title xml:lang="nl">dataset met metadata van reeds gepubliceerde items uit de collectie van het Design Museum Gent.</dct:title>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n65d4dea91077468b8157cfeb190bdd17b1">
-            <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://data.designmuseumgent.be/id/objects/</dct:identifier>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://data.designmuseumgent.be/id/exhibitions/">
-        <dct:title xml:lang="nl">dataset met metadata rond de tentoonstellingen gerelateerd aan gepubliceerd items uit de collectie van Design Museum Gent.</dct:title>
-        <mdcat:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:description xml:lang="nl">@fixme PLACEHOLDER</dct:description>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://data.designmuseumgent.be/id/objects/</dct:identifier>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n967b5701c1fc4ee5ad19a5f97300ce1ab1">
-            <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://data.designmuseumgent.be/id/exhibitions/billboardseries">
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:title xml:lang="nl">dataset met metadata rond billboards die in samenwerking met 019 geproduceerd werden op de banner in de Drabstraat aan Design Museum Gent</dct:title>
-        <mdcat:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:description xml:lang="nl">@fixme PLACEHOLDER</dct:description>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n34250484ed3b4f1ab4e501d50930cd0fb1">
-            <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://data.designmuseumgent.be/id/exhibitions/billboardseries</dct:identifier>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://data.designmuseumgent.be/id/agents/">
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://data.designmuseumgent.be/id/agents/</dct:identifier>
-        <mdcat:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:description xml:lang="nl">@fixme PLACEHOLDER</dct:description>
-        <dct:title xml:lang="nl">dataset met metadata rond personen en instellingen (agenten) gerelateerd aan gepubliceerd items uit de collectie van Design Museum Gent</dct:title>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="nd16be22cf43148a39a648108732dfadeb1">
-            <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://marineinfo.org/id/dataset/1426">
-        <dct:creator rdf:resource="https://ror.org/0496vr396"/>
-        <dcat:keyword xml:lang="en">linked data</dcat:keyword>
-        <dcat:keyword xml:lang="en">location</dcat:keyword>
-        <dcat:keyword xml:lang="en">marine</dcat:keyword>
-        <dcat:keyword xml:lang="en">Geography</dcat:keyword>
-        <dcat:keyword xml:lang="en">semantic</dcat:keyword>
-        <dcat:keyword xml:lang="en">LDES</dcat:keyword>
-        <dcat:keyword xml:lang="en">gazetteer</dcat:keyword>
-        <dcat:keyword xml:lang="en">Charts (maps)</dcat:keyword>
-        <dcat:keyword xml:lang="en">Information systems</dcat:keyword>
-        <dcat:keyword xml:lang="en">spatial</dcat:keyword>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.14284/561</dct:identifier>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php</dcat:endpointURL>
-        <dct:title xml:lang="en">Marine Regions gazetteer</dct:title>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:spatial>
-          <dct:Location rdf:nodeID="n2de842579a7147c7bd275bdebdc812dcb1">
-            <loc:geometry rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral"><![CDATA[<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POLYGON ((
-			-180.0^^xsd:float	-90.0^^xsd:float
-			180.0^^xsd:float	90.0^^xsd:float
-		))]]></loc:geometry>
-          </dct:Location>
-        </dct:spatial>
-        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-08-16T00:00:00</dct:created>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-10-15T00:00:00</dct:modified>
-        <dct:temporal>
-          <dct:PeriodOfTime rdf:nodeID="n2de842579a7147c7bd275bdebdc812dcb2">
-            <schema1:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-12-08T00:00:00+00:00</schema1:startDate>
-          </dct:PeriodOfTime>
-        </dct:temporal>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:description xml:lang="en">The Marine Regions gazetteer is a standard list of marine geographical place names and locations.&#13;
+    <dcat:contactPoint rdf:nodeID="nbfa80479f607474c976a9d7ae8e2a647b1"/>
+    <dct:publisher rdf:nodeID="nbfa80479f607474c976a9d7ae8e2a647b2"/>
+    <dcat:dataset rdf:resource="https://data.designmuseumgent.be/id/objects/"/>
+    <dcat:dataset rdf:resource="https://data.designmuseumgent.be/id/exhibitions/"/>
+    <dcat:dataset rdf:resource="https://data.designmuseumgent.be/id/exhibitions/billboardseries"/>
+    <dcat:dataset rdf:resource="https://data.designmuseumgent.be/id/agents/"/>
+    <dcat:dataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <dcat:dataset rdf:resource="https://marineinfo.org/id/dataset/6293"/>
+    <dcat:dataset rdf:resource="https://brugge-ldes.geomobility.eu/observations"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/hva/5d066834859abadfe6a565a12a35b745"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/industriemuseum/423276211afbdf9f78f02d580c2dcd58"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/archiefgent/ea58397710edc2aed8c8303cf52a9cd8"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/dmg/2a99e77c8310d43dd49391be12675c80"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/dmg/bcdb28735e86fdacaded956c17f3dc81"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/adlib/91840a139e8b84d77aac0607468a7dd5"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/adlib/5d500058200ecaaf8b97bb1bed9fdb94"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/dmg/206d69c469151306d018140d6a5345e6"/>
+    <dcat:dataset rdf:resource="https://stad.gent/id/dataset/stam/34ee0269ec5b7dc6fb6e8f98a16a2664"/>
+    <dcat:dataset rdf:resource="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions"/>
+    <dcat:dataset rdf:resource="https://telraam-api.net/ldes/observations"/>
+    <dcat:service rdf:resource="https://marineinfo.org/id/dataset/1426#MR_RESTservice"/>
+    <dcat:service rdf:resource="https://marineinfo.org/id/dataset/1426#MR_searchpage"/>
+    <dcat:service rdf:resource="https://marineinfo.org/id/dataset/1426#MR_browsepage"/>
+    <dcat:service rdf:resource="https://marineinfo.org/id/dataset/1426#MR_GeoRSS"/>
+    <dcat:service rdf:resource="https://marineinfo.org/id/dataset/1426#MR_LDES"/>
+    <dcat:service rdf:resource="https://marineinfo.org/id/dataset/1426#MR_OGCservice"/>
+    <dcat:service rdf:resource="https://marineinfo.org/id/dataset/1426#MR_SOAPservice"/>
+    <dcat:service rdf:resource="https://marineinfo.org/id/dataset/1426#MR_mregions"/>
+    <dcat:service rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-location/description"/>
+    <dcat:service rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-page/description"/>
+    <dcat:service rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-time/description"/>
+    <dcat:service rdf:resource="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView/description"/>
+    <dcat:service rdf:resource="https://telraam-api.net/ldes/observations/by-location/description"/>
+    <dcat:service rdf:resource="https://telraam-api.net/ldes/observations/by-page/description"/>
+    <dcat:service rdf:resource="https://telraam-api.net/ldes/observations/by-time/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://brugge-ldes.geomobility.eu/observations/by-location/description">
+    <dct:description xml:lang="nl">View per locatie van de verkeerstellingen in Vlaanderen</dct:description>
+    <dcat:servesDataset rdf:resource="https://brugge-ldes.geomobility.eu/observations"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://brugge-ldes.geomobility.eu/observations/by-location</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:resource="https://geomobility.eu/id/dcat#contact"/>
+    <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
+    <dct:title xml:lang="nl">Verkeerstellingen in Vlaanderen per locatie</dct:title>
+    <dcat:endpointURL rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://brugge-ldes.geomobility.eu/observations/by-time/description">
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://brugge-ldes.geomobility.eu/observations/by-time</dct:identifier>
+    <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dcat:servesDataset rdf:resource="https://brugge-ldes.geomobility.eu/observations"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:resource="https://geomobility.eu/id/dcat#contact"/>
+    <dcat:endpointURL rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-time"/>
+    <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
+    <dct:title xml:lang="nl">Verkeerstellingen in Vlaanderen op tijdsbasis (hierarchisch van jaar tot uur)</dct:title>
+    <dct:description xml:lang="nl">View op tijdsbasis van de verkeerstellingen in Vlaanderen</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n78e7fd267e514c08ab429a938d9cf5f3b1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426">
+    <dct:creator rdf:resource="https://ror.org/0496vr396"/>
+    <dcat:keyword xml:lang="en">linked data</dcat:keyword>
+    <dcat:keyword xml:lang="en">location</dcat:keyword>
+    <dcat:keyword xml:lang="en">marine</dcat:keyword>
+    <dcat:keyword xml:lang="en">Geography</dcat:keyword>
+    <dcat:keyword xml:lang="en">semantic</dcat:keyword>
+    <dcat:keyword xml:lang="en">LDES</dcat:keyword>
+    <dcat:keyword xml:lang="en">gazetteer</dcat:keyword>
+    <dcat:keyword xml:lang="en">Charts (maps)</dcat:keyword>
+    <dcat:keyword xml:lang="en">Information systems</dcat:keyword>
+    <dcat:keyword xml:lang="en">spatial</dcat:keyword>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.14284/561</dct:identifier>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php</dcat:endpointURL>
+    <dct:title xml:lang="en">Marine Regions gazetteer</dct:title>
+    <dcat:contactPoint rdf:nodeID="n0b7db8fe74244ced8f5c0b14a4d3ccfdb3"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:temporal rdf:nodeID="n0b7db8fe74244ced8f5c0b14a4d3ccfdb2"/>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-08-16T00:00:00</dct:created>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-10-15T00:00:00</dct:modified>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:spatial rdf:nodeID="n0b7db8fe74244ced8f5c0b14a4d3ccfdb1"/>
+    <dct:description xml:lang="en">The Marine Regions gazetteer is a standard list of marine geographical place names and locations.&#13;
 			Objects from different sources (authoritative databases, ecological classifications,...) are integrated into one database.&#13;
 			Where possible, the geometry of these sources is included and displayed in the gazetteer.&#13;
 			In addition, conceptual information (e.g. type of object) is added to the objects, and they are included in a hierarchy.&#13;
 			Each object is assigned a unique ID (MRGID), which allows for unambiguous reference to the objects.&#13;
 			The Marine Regions gazetteer is part of the LifeWatch project, and serves as a geographical basis for biodiversity databases, global fisheries research and maritime applications, among other things.&#13;
 			In addition, the data was released as a Linked Data Event Stream in July 2021.</dct:description>
-        <dct:isPartOf rdf:resource="https://marineinfo.org/id/dataset/6293"/>
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n2de842579a7147c7bd275bdebdc812dcb3">
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:fn>Marine Regions Data Management team</v:fn>
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="n2de842579a7147c7bd275bdebdc812dcb4">
-                <v:postal-code>8400</v:postal-code>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-                <v:countryname>Belgium</v:countryname>
-                <v:locality>Ostend</v:locality>
-              </v:Address>
-            </v:hasAdress>
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-          </v:Kind>
-        </dcat:contactPoint>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://marineinfo.org/id/dataset/6293">
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dcat:keyword xml:lang="en">Contiguous zones</dcat:keyword>
-        <dcat:keyword xml:lang="en">World Waters</dcat:keyword>
-        <dcat:keyword xml:lang="en">International boundaries</dcat:keyword>
-        <dcat:keyword xml:lang="en">World Oceans</dcat:keyword>
-        <dcat:keyword xml:lang="en">Exclusive economic zone</dcat:keyword>
-        <dcat:keyword xml:lang="en">LDES</dcat:keyword>
-        <dcat:keyword xml:lang="en">GIS</dcat:keyword>
-        <dcat:keyword xml:lang="en">Marine</dcat:keyword>
-        <dcat:keyword xml:lang="en">Territorial waters</dcat:keyword>
-        <dcat:keyword xml:lang="en">Law of the sea</dcat:keyword>
-        <dcat:keyword xml:lang="en">Biogeography</dcat:keyword>
-        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-24T00:00:00</dct:created>
-        <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1080/01490419.2014.902881</dct:identifier>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org</dcat:endpointURL>
-        <dct:title xml:lang="en">MarineRegions.org</dct:title>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-10-15T00:00:00</dct:modified>
-        <dcat:theme>
-          <skos:Concept rdf:nodeID="n665c9ca1299f46888675b1c799852779b3">
-            <skos:prefLabel xml:lang="en">Bio-geographical regions</skos:prefLabel>
-            <skos:related rdf:resource="https://inspire.ec.europa.eu/theme/br"/>
-          </skos:Concept>
-        </dcat:theme>
-        <dcat:theme>
-          <skos:Concept rdf:nodeID="n665c9ca1299f46888675b1c799852779b4">
-            <skos:prefLabel xml:lang="en">Geographical names</skos:prefLabel>
-            <skos:related rdf:resource="https://inspire.ec.europa.eu/theme/gn"/>
-          </skos:Concept>
-        </dcat:theme>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:description xml:lang="en">Geographic Information Systems have become indispensable tools in managing and displaying marine data and information.&#13;
+    <dct:isPartOf rdf:resource="https://marineinfo.org/id/dataset/6293"/>
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbfa80479f607474c976a9d7ae8e2a647b1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <rdf:type rdf:resource="http://schema.org/contactPoint"/>
+    <v:hasEmail rdf:resource="mailto:vsds@vlaanderen.be"/>
+    <v:hasURL>https://www.vlaanderen.be/vlaamse-smart-data-space-portaal</v:hasURL>
+    <v:organizationname xml:lang="nl">Digitaal Vlaanderen</v:organizationname>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/6293">
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dcat:keyword xml:lang="en">Contiguous zones</dcat:keyword>
+    <dcat:keyword xml:lang="en">World Waters</dcat:keyword>
+    <dcat:keyword xml:lang="en">International boundaries</dcat:keyword>
+    <dcat:keyword xml:lang="en">World Oceans</dcat:keyword>
+    <dcat:keyword xml:lang="en">Exclusive economic zone</dcat:keyword>
+    <dcat:keyword xml:lang="en">LDES</dcat:keyword>
+    <dcat:keyword xml:lang="en">GIS</dcat:keyword>
+    <dcat:keyword xml:lang="en">Marine</dcat:keyword>
+    <dcat:keyword xml:lang="en">Territorial waters</dcat:keyword>
+    <dcat:keyword xml:lang="en">Law of the sea</dcat:keyword>
+    <dcat:keyword xml:lang="en">Biogeography</dcat:keyword>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-24T00:00:00</dct:created>
+    <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi:10.1080/01490419.2014.902881</dct:identifier>
+    <dcat:theme rdf:nodeID="nb52d320b0de347eb8625d509c8f2a019b3"/>
+    <dcat:theme rdf:nodeID="nb52d320b0de347eb8625d509c8f2a019b4"/>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org</dcat:endpointURL>
+    <dct:title xml:lang="en">MarineRegions.org</dct:title>
+    <dcat:contactPoint rdf:nodeID="nb52d320b0de347eb8625d509c8f2a019b1"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-10-15T00:00:00</dct:modified>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dct:description xml:lang="en">Geographic Information Systems have become indispensable tools in managing and displaying marine data and information.&#13;
 			The purpose of Marine Regions is to create a standard, relational list of geographic names, coupled with information and maps of the geographic location of these features.&#13;
 			The objectives are to capture all geographic marine names worldwide, including ocean basins, seas, seamounts, sandbanks, ridges, bays and other marine geographical place names and attributes, and to display univocally the boundaries of marine biogeographic or other managed marine areas in order to facilitate marine data management, marine (bio)geographic research and the management of marine areas.&#13;
 			Marine Regions is freely available at MarineRegions.org .&#13;
 			The Marine Regions database builds further on an integration of the VLIMAR Gazetteer (place names) and the VLIZ Maritime Boundaries Geodatabase (polygons for sea areas).&#13;
 			Funding for the creation of the VLIMAR gazetteer was provided initially through the EU Network of Excellence MarBEF, funding for the further development and maintenance of Marine Regions is provided by Research Foundation - Flanders (FWO) as part of the Belgian contribution to LifeWatch.&#13;
 			</dct:description>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n665c9ca1299f46888675b1c799852779b1">
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="n665c9ca1299f46888675b1c799852779b2">
-                <v:postal-code>8400</v:postal-code>
-                <v:locality>Ostend</v:locality>
-                <v:countryname>Belgium</v:countryname>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-              </v:Address>
-            </v:hasAdress>
-            <v:fn>Marine Regions Data Management team</v:fn>
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:creator rdf:resource="https://ror.org/0496vr396"/>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://brugge-ldes.geomobility.eu/observations">
-        <dct:conformsTo rdf:resource="https://w3id.org/tree/specification"/>
-        <dct:conformsTo rdf:resource="https://w3id.org/ldes/specification"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://brugge-ldes.geomobility.eu/observations</dct:identifier>
-        <dcat:keyword xml:lang="en">LDES</dcat:keyword>
-        <dct:description xml:lang="nl">TODO: beschrijving voor Geomobility LDES voor verkeerstellingen in Vlaanderen</dct:description>
-        <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:title xml:lang="nl">Geomobility LDES voor verkeerstellingen in Vlaanderen</dct:title>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dcat:contactPoint rdf:resource="https://geomobility.eu/id/dcat#contact"/>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <ns3:EventStream rdf:about="https://stad.gent/id/dataset/hva/5d066834859abadfe6a565a12a35b745">
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n85841280f6884243b7f11feaf47b0666b1">
-            <v:hasEmail rdf:resource="mailto:collectie@gent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/hva/objecten"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:title xml:lang="nl">objecten van Het Huis van Alijn (Gent)</dct:title>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/hva/5d066834859abadfe6a565a12a35b745</dct:identifier>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: Het Huis van Alijn (Gent)</dct:description>
-      </ns3:EventStream>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://stad.gent/id/dataset/industriemuseum/423276211afbdf9f78f02d580c2dcd58">
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/industriemuseum/objecten"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: Industriemuseum</dct:description>
-        <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:title xml:lang="nl">objecten van Industriemuseum</dct:title>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/industriemuseum/423276211afbdf9f78f02d580c2dcd58</dct:identifier>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="ne95d97f10bc3427aba10599bfe7f3ca0b1">
-            <v:hasEmail rdf:resource="mailto:bibliotheek@industriemuseum.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://stad.gent/id/dataset/archiefgent/ea58397710edc2aed8c8303cf52a9cd8">
-        <dct:title xml:lang="nl">objecten van Archief Gent</dct:title>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: Archief Gent</dct:description>
-        <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/archiefgent/ea58397710edc2aed8c8303cf52a9cd8</dct:identifier>
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/archiefgent/objecten"/>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n11b70711f7f94f67927ecd03f0fda9fcb1">
-            <v:hasEmail rdf:resource="mailto:archief@stad.gent"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <ns3:EventStream rdf:about="https://stad.gent/id/dataset/dmg/2a99e77c8310d43dd49391be12675c80">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/tentoonstellingen"/>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'tentoonstellingen' van de instelling: Design Museum Gent</dct:description>
-        <dct:title xml:lang="nl">tentoonstellingen van Design Museum Gent</dct:title>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/dmg/2a99e77c8310d43dd49391be12675c80</dct:identifier>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="ne053bce573d54da4b3ec6fbcb12d002fb1">
-            <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-      </ns3:EventStream>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://stad.gent/id/dataset/dmg/bcdb28735e86fdacaded956c17f3dc81">
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n9241616274bd464781578a78972b3627b1">
-            <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
-        <dct:title xml:lang="nl">archief van Design Museum Gent</dct:title>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'archief' van de instelling: Design Museum Gent</dct:description>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/archief"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/dmg/bcdb28735e86fdacaded956c17f3dc81</dct:identifier>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://stad.gent/id/dataset/adlib/91840a139e8b84d77aac0607468a7dd5">
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/adlib/thesaurus"/>
-        <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="na88fa7e7a041417397f424e27e1c02e6b1">
-            <v:hasEmail rdf:resource="mailto:collectie@gent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'thesaurus' van de instelling: Archief Gent, Design Museum Gent, Het Huis van Alijn (Gent), Industriemuseum, STAM (Gent)</dct:description>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/adlib/91840a139e8b84d77aac0607468a7dd5</dct:identifier>
-        <dct:title xml:lang="nl">thesaurus van Archief Gent, Design Museum Gent, Het Huis van Alijn (Gent), Industriemuseum, STAM (Gent)</dct:title>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <ns3:EventStream rdf:about="https://stad.gent/id/dataset/adlib/5d500058200ecaaf8b97bb1bed9fdb94">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/adlib/5d500058200ecaaf8b97bb1bed9fdb94</dct:identifier>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n5fbc11ad00ca4f428c98c64470b0c9fbb1">
-            <v:hasEmail rdf:resource="mailto:collectie@gent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'personen' van de instelling: Archief Gent, Design Museum Gent, Het Huis van Alijn (Gent), Industriemuseum, STAM (Gent)</dct:description>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:title xml:lang="nl">personen van Archief Gent, Design Museum Gent, Het Huis van Alijn (Gent), Industriemuseum, STAM (Gent)</dct:title>
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/adlib/personen"/>
-      </ns3:EventStream>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://stad.gent/id/dataset/dmg/206d69c469151306d018140d6a5345e6">
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/objecten"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/dmg/206d69c469151306d018140d6a5345e6</dct:identifier>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:title xml:lang="nl">objecten van Design Museum Gent</dct:title>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n82d7d4e3e89343109830f49169f0b5c2b1">
-            <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: Design Museum Gent</dct:description>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:dataset>
-      <ns3:EventStream rdf:about="https://stad.gent/id/dataset/stam/34ee0269ec5b7dc6fb6e8f98a16a2664">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/stam/34ee0269ec5b7dc6fb6e8f98a16a2664</dct:identifier>
-        <ns1:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/stam/objecten"/>
-        <dct:title xml:lang="nl">objecten van STAM (Gent)</dct:title>
-        <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: STAM (Gent)</dct:description>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="na780f05cacf443b1a18da26c10d7e86bb1">
-            <v:hasEmail rdf:resource="mailto:collectie.stam@stad.gent"/>
-          </v:Kind>
-        </dcat:contactPoint>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-      </ns3:EventStream>
-    </dcat:dataset>
-    <dcat:dataset>
-      <ns3:EventStream rdf:about="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions">
-        <ns2:memberType rdf:resource="https://schema.org/TouristAttraction"/>
-        <ns3:versionOfPath rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
-        <dct:title xml:lang="nl">LDES Westtoer producten</dct:title>
-        <ns1:shape rdf:resource="https://westtoer.be/id/shape/touristattractions"/>
-        <ns1:shape rdf:resource="file:///touristattractions/shape"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <ns3:createVersions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns3:createVersions>
-        <dcat:keyword xml:lang="en">LDES</dcat:keyword>
-        <dct:description xml:lang="nl">Linked Data Event Stream (LDES) voor Westtoer producten</dct:description>
-        <dct:conformsTo rdf:resource="https://w3id.org/ldes/specification"/>
-        <dct:conformsTo rdf:resource="https://w3id.org/tree/specification"/>
-        <ns1:view rdf:resource="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView"/>
-        <dcat:contactPoint rdf:resource="https://westtoer.be/id/contact"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <ns3:timestampPath rdf:resource="http://www.w3.org/ns/prov#generatedAtTime"/>
-        <dct:identifier>https://westtoer.be/id/dataset/ldes-producten</dct:identifier>
-        <ns2:hasDefaultView rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns2:hasDefaultView>
-      </ns3:EventStream>
-    </dcat:dataset>
-    <dcat:dataset>
-      <dcat:Dataset rdf:about="https://telraam-api.net/ldes/observations">
-        <dcat:contactPoint rdf:resource="https://telraam.net/id/dcat#contact"/>
-        <dct:conformsTo rdf:resource="https://w3id.org/ldes/specification"/>
-        <dct:conformsTo rdf:resource="https://data.vlaanderen.be/id/concept/dataserviceprotocol/LDES"/>
-        <dct:conformsTo rdf:resource="https://w3id.org/tree/specification"/>
-        <ns1:view rdf:resource="https://telraam-api.net/ldes/observations/by-page"/>
-        <ns1:view rdf:resource="https://telraam-api.net/ldes/observations/by-time"/>
-        <ns1:view rdf:resource="https://telraam-api.net/ldes/observations/by-location"/>
-        <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
-        <ns3:versionOfPath rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
-        <dct:title xml:lang="nl">Telraam LDES voor verkeersmetingen in Vlaanderen</dct:title>
-        <dcat:keyword xml:lang="en">LDES</dcat:keyword>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://telraam-api.net/ldes/observations</dct:identifier>
-        <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:description xml:lang="nl">TODO: beschrijving voor Telraam LDES voor verkeersmetingen in Vlaanderen</dct:description>
-        <ns1:shape>
-          <sh:NodeShape rdf:nodeID="nea7e02208a6c4b0d83498eb366234331b1"/>
-        </ns1:shape>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <ns3:timestampPath rdf:resource="http://www.w3.org/ns/prov#generatedAtTime"/>
-      </dcat:Dataset>
-    </dcat:dataset>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://marineinfo.org/id/dataset/1426#MR_RESTservice">
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
-        <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/rest/</dcat:endpointURL>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n61e17e5125a1406ca25e264ba03ef75ab1">
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:fn>Marine Regions Data Management team</v:fn>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="n61e17e5125a1406ca25e264ba03ef75ab2">
-                <v:postal-code>8400</v:postal-code>
-                <v:countryname>Belgium</v:countryname>
-                <v:locality>Ostend</v:locality>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-              </v:Address>
-            </v:hasAdress>
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-          </v:Kind>
-        </dcat:contactPoint>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:title xml:lang="en">Marine Regions RESTful service</dct:title>
-        <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_RESTservice</dct:identifier>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://marineinfo.org/id/dataset/1426#MR_searchpage">
-        <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_searchpage</dct:identifier>
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:title xml:lang="en">Search page gazetteer</dct:title>
-        <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n4af492dcb371495e80ec9c7702b49595b1">
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="n4af492dcb371495e80ec9c7702b49595b2">
-                <v:postal-code>8400</v:postal-code>
-                <v:countryname>Belgium</v:countryname>
-                <v:locality>Ostend</v:locality>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-              </v:Address>
-            </v:hasAdress>
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:fn>Marine Regions Data Management team</v:fn>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=search</dcat:endpointURL>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://marineinfo.org/id/dataset/1426#MR_browsepage">
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="ncd6d8c6cc9b94e668db5badc9fedc425b1">
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:fn>Marine Regions Data Management team</v:fn>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="ncd6d8c6cc9b94e668db5badc9fedc425b2">
-                <v:postal-code>8400</v:postal-code>
-                <v:countryname>Belgium</v:countryname>
-                <v:locality>Ostend</v:locality>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-              </v:Address>
-            </v:hasAdress>
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_browsepage</dct:identifier>
-        <dct:title xml:lang="en">Hierarchical tree gazetteer</dct:title>
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=browser</dcat:endpointURL>
-        <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://marineinfo.org/id/dataset/1426#MR_GeoRSS">
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="nd1c2783cef9547a88799921b145b6303b1">
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="nd1c2783cef9547a88799921b145b6303b2">
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-                <v:postal-code>8400</v:postal-code>
-                <v:locality>Ostend</v:locality>
-                <v:countryname>Belgium</v:countryname>
-              </v:Address>
-            </v:hasAdress>
-            <v:fn>Marine Regions Data Management team</v:fn>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_GeoRSS</dct:identifier>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=rss</dcat:endpointURL>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
-        <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:title xml:lang="en">Marine Regions GeoRSS</dct:title>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://marineinfo.org/id/dataset/1426#MR_LDES">
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="nd1d3d751c80a4aceb938f324a0a1d80db1">
-            <v:hasAdress>
-              <v:Address rdf:nodeID="nd1d3d751c80a4aceb938f324a0a1d80db2">
-                <v:locality>Ostend</v:locality>
-                <v:countryname>Belgium</v:countryname>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-                <v:postal-code>8400</v:postal-code>
-              </v:Address>
-            </v:hasAdress>
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-            <v:fn>Marine Regions Data Management team</v:fn>
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-          </v:Kind>
-        </dcat:contactPoint>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:title xml:lang="en">Marine Regions Linked Data Event Stream</dct:title>
-        <dct:conformsTo rdf:resource="https://data.vlaanderen.be/id/concept/dataserviceprotocol/LDES"/>
-        <dct:conformsTo rdf:resource="https://w3id.org/ldes/specification"/>
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_LDES</dct:identifier>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/feed</dcat:endpointURL>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://marineinfo.org/id/dataset/1426#MR_OGCservice">
-        <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_OGCservice</dct:identifier>
-        <dct:title xml:lang="en">Marine Regions OGC service</dct:title>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="nc617100532d54ce1ab07fcaa08263639b1">
-            <v:fn>Marine Regions Data Management team</v:fn>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="nc617100532d54ce1ab07fcaa08263639b2">
-                <v:postal-code>8400</v:postal-code>
-                <v:countryname>Belgium</v:countryname>
-                <v:locality>Ostend</v:locality>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-              </v:Address>
-            </v:hasAdress>
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/webservices.php</dcat:endpointURL>
-        <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://marineinfo.org/id/dataset/1426#MR_SOAPservice">
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_SOAPservice</dct:identifier>
-        <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=soap&amp;wsdl=1</dcat:endpointURL>
-        <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:title xml:lang="en">Marine Regions SOAP service </dct:title>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="na8cb142249c54abc9aa16552f28d0602b1">
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-            <v:fn>Marine Regions Data Management team</v:fn>
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="na8cb142249c54abc9aa16552f28d0602b2">
-                <v:countryname>Belgium</v:countryname>
-                <v:locality>Ostend</v:locality>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-                <v:postal-code>8400</v:postal-code>
-              </v:Address>
-            </v:hasAdress>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://marineinfo.org/id/dataset/1426#MR_mregions">
-        <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cran.r-project.org/web/packages/mregions/</dcat:endpointURL>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dcat:contactPoint>
-          <v:Kind rdf:nodeID="n222ae15483fb406c9cde1239f10cd991b1">
-            <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
-            <v:fn>Marine Regions Data Management team</v:fn>
-            <v:hasURL>https://www.marineregions.org/</v:hasURL>
-            <v:hasAdress>
-              <v:Address rdf:nodeID="n222ae15483fb406c9cde1239f10cd991b2">
-                <v:postal-code>8400</v:postal-code>
-                <v:locality>Ostend</v:locality>
-                <v:countryname>Belgium</v:countryname>
-                <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
-              </v:Address>
-            </v:hasAdress>
-            <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
-          </v:Kind>
-        </dcat:contactPoint>
-        <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.ropensci.org/mregions/index.html</dcat:endpointDescription>
-        <dct:title xml:lang="en">R package mregions</dct:title>
-        <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
-        <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
-        <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
-        <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_mregions</dct:identifier>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://brugge-ldes.geomobility.eu/observations/by-location/description">
-        <dct:description xml:lang="nl">View per locatie van de verkeerstellingen in Vlaanderen</dct:description>
-        <dcat:servesDataset rdf:resource="https://brugge-ldes.geomobility.eu/observations"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://brugge-ldes.geomobility.eu/observations/by-location</dct:identifier>
-        <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dcat:contactPoint rdf:resource="https://geomobility.eu/id/dcat#contact"/>
-        <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
-        <dct:title xml:lang="nl">Verkeerstellingen in Vlaanderen per locatie</dct:title>
-        <dcat:endpointURL rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-location"/>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://brugge-ldes.geomobility.eu/observations/by-page/description">
-        <dct:title xml:lang="nl">Verkeerstellingen in Vlaanderen per pagina</dct:title>
-        <dcat:endpointURL rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-page"/>
-        <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dcat:contactPoint rdf:resource="https://geomobility.eu/id/dcat#contact"/>
-        <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
-        <dct:description xml:lang="nl">Default gepagineerde view van de verkeerstellingen in Vlaanderen</dct:description>
-        <dcat:servesDataset rdf:resource="https://brugge-ldes.geomobility.eu/observations"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://brugge-ldes.geomobility.eu/observations/by-page</dct:identifier>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://brugge-ldes.geomobility.eu/observations/by-time/description">
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://brugge-ldes.geomobility.eu/observations/by-time</dct:identifier>
-        <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dcat:servesDataset rdf:resource="https://brugge-ldes.geomobility.eu/observations"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dcat:contactPoint rdf:resource="https://geomobility.eu/id/dcat#contact"/>
-        <dcat:endpointURL rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-time"/>
-        <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
-        <dct:title xml:lang="nl">Verkeerstellingen in Vlaanderen op tijdsbasis (hierarchisch van jaar tot uur)</dct:title>
-        <dct:description xml:lang="nl">View op tijdsbasis van de verkeerstellingen in Vlaanderen</dct:description>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <dcat:DataService rdf:about="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView/description">
-        <rdf:type rdf:resource="https://w3id.org/tree#ViewDescription"/>
-        <dcat:contactPoint rdf:resource="https://westtoer.be/id/contact"/>
-        <dcat:endpointURL rdf:resource="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView"/>
-        <ns1:fragmentationStrategy rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        <ns3:retentionPolicy>
-          <ns3:LatestVersionSubset rdf:nodeID="n351131a5a57a46ffaa3e30d6fe38c3fbb1">
-            <ns3:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ns3:amount>
-          </ns3:LatestVersionSubset>
-        </ns3:retentionPolicy>
-        <dct:title xml:lang="nl">Westtoer producten Linked Data Event Stream</dct:title>
-        <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:identifier>https://westtoer.be/id/dataservice/touristattractions/latestView</dct:identifier>
-        <dct:description xml:lang="nl">Westtoer producten Linked Data Event Stream</dct:description>
-        <dcat:servesDataset rdf:resource="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions"/>
-        <ns1:pageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</ns1:pageSize>
-        <dcat:endpointDescription rdf:resource="https://informatievlaanderen.github.io/VSDS-Tech-Docs/introduction/LDES_server"/>
-        <dcat:keyword xml:lang="en">LDES</dcat:keyword>
-        <dct:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
-      </dcat:DataService>
-    </dcat:service>
-    <dcat:service>
-      <ns1:ViewDescription rdf:about="https://telraam-api.net/ldes/observations/by-location/description">
-        <dct:title xml:lang="nl">Verkeersmetingen in Vlaanderen per locatie</dct:title>
-        <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://telraam-api.net/ldes/observations/by-location</dct:identifier>
-        <ns3:retentionPolicy>
-          <ns3:DurationAgoPolicy rdf:nodeID="n2cc13d69300940018277a9c32ee003b8b1">
-            <ns1:value rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P5Y</ns1:value>
-          </ns3:DurationAgoPolicy>
-        </ns3:retentionPolicy>
-        <dct:description xml:lang="nl">View per locatie van de verkeersmetingen in Vlaanderen</dct:description>
-        <dcat:endpointURL rdf:resource="https://telraam-api.net/ldes/observations/by-location"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-        <dcat:contactPoint rdf:resource="https://telraam.net/id/dcat#contact"/>
-        <ns1:fragmentationStrategy rdf:parseType="Collection">
-          <ns1:GeospatialFragmentation rdf:nodeID="n2cc13d69300940018277a9c32ee003b8b2">
-            <ns1:maxZoom>14</ns1:maxZoom>
-            <ns1:fragmentationPath>http://www.opengis.net/ont/geosparql#asWKT</ns1:fragmentationPath>
-          </ns1:GeospatialFragmentation>
-        </ns1:fragmentationStrategy>
-        <ns1:pageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</ns1:pageSize>
-        <dcat:servesDataset rdf:resource="https://telraam-api.net/ldes/observations"/>
-      </ns1:ViewDescription>
-    </dcat:service>
-    <dcat:service>
-      <ns1:ViewDescription rdf:about="https://telraam-api.net/ldes/observations/by-page/description">
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <dct:description xml:lang="nl">Default gepagineerde view van de verkeersmetingen in Vlaanderen</dct:description>
-        <ns1:pageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</ns1:pageSize>
-        <dcat:servesDataset rdf:resource="https://telraam-api.net/ldes/observations"/>
-        <dcat:endpointURL rdf:resource="https://telraam-api.net/ldes/observations/by-page"/>
-        <ns1:fragmentationStrategy rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://telraam-api.net/ldes/observations/by-page</dct:identifier>
-        <dct:title xml:lang="nl">Verkeersmetingen in Vlaanderen per pagina</dct:title>
-        <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
-        <dcat:contactPoint rdf:resource="https://telraam.net/id/dcat#contact"/>
-        <ns3:retentionPolicy>
-          <ns3:DurationAgoPolicy rdf:nodeID="nb723fdca5082457297ba65220b9c2460b1">
-            <ns1:value rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P5Y</ns1:value>
-          </ns3:DurationAgoPolicy>
-        </ns3:retentionPolicy>
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-        <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-      </ns1:ViewDescription>
-    </dcat:service>
-    <dcat:service>
-      <ns1:ViewDescription rdf:about="https://telraam-api.net/ldes/observations/by-time/description">
-        <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://telraam-api.net/ldes/observations/by-time</dct:identifier>
-        <dcat:contactPoint rdf:resource="https://telraam.net/id/dcat#contact"/>
-        <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
-        <dct:description xml:lang="nl">View op tijdsbasis van de verkeersmetingen in Vlaanderen</dct:description>
-        <dct:title xml:lang="nl">Verkeersmetingen in Vlaanderen op tijdsbasis (hierarchisch van jaar tot uur)</dct:title>
-        <dcat:servesDataset rdf:resource="https://telraam-api.net/ldes/observations"/>
-        <ns1:fragmentationStrategy rdf:parseType="Collection">
-          <ns1:HierarchicalTimeBasedFragmentation rdf:nodeID="n9b17b62bb5814574997191ca3a7f6f74b2">
-            <ns1:maxGranularity>hour</ns1:maxGranularity>
-            <ns1:fragmentationPath>http://www.w3.org/ns/prov#generatedAtTime</ns1:fragmentationPath>
-          </ns1:HierarchicalTimeBasedFragmentation>
-        </ns1:fragmentationStrategy>
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
-        <ns3:retentionPolicy>
-          <ns3:DurationAgoPolicy rdf:nodeID="n9b17b62bb5814574997191ca3a7f6f74b1">
-            <ns1:value rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P5Y</ns1:value>
-          </ns3:DurationAgoPolicy>
-        </ns3:retentionPolicy>
-        <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
-        <dcat:endpointURL rdf:resource="https://telraam-api.net/ldes/observations/by-time"/>
-        <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
-        <ns1:pageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</ns1:pageSize>
-      </ns1:ViewDescription>
-    </dcat:service>
-  </dcat:Catalog>
-  <dct:Agent rdf:about="http://stad.gent/">
-    <foaf:name xml:lang="nl">Stad Gent</foaf:name>
-  </dct:Agent>
-  <dct:Agent rdf:about="https://ror.org/0496vr396">
+    <dct:creator rdf:resource="https://ror.org/0496vr396"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426#MR_mregions">
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cran.r-project.org/web/packages/mregions/</dcat:endpointURL>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dcat:contactPoint rdf:nodeID="nca4829326a4d44bfaaf20c2c7f7c3033b1"/>
+    <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.ropensci.org/mregions/index.html</dcat:endpointDescription>
+    <dct:title xml:lang="en">R package mregions</dct:title>
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_mregions</dct:identifier>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://telraam-api.net/ldes/observations/by-time/description">
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://telraam-api.net/ldes/observations/by-time</dct:identifier>
+    <dcat:contactPoint rdf:resource="https://telraam.net/id/dcat#contact"/>
+    <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
+    <ns2:fragmentationStrategy rdf:nodeID="n4cc54b7283e4421b9eccdfdc2affa33db3"/>
+    <dct:description xml:lang="nl">View op tijdsbasis van de verkeersmetingen in Vlaanderen</dct:description>
+    <ns1:retentionPolicy rdf:nodeID="n4cc54b7283e4421b9eccdfdc2affa33db1"/>
+    <dct:title xml:lang="nl">Verkeersmetingen in Vlaanderen op tijdsbasis (hierarchisch van jaar tot uur)</dct:title>
+    <dcat:servesDataset rdf:resource="https://telraam-api.net/ldes/observations"/>
+    <rdf:type rdf:resource="https://w3id.org/tree#ViewDescription"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dcat:endpointURL rdf:resource="https://telraam-api.net/ldes/observations/by-time"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <ns2:pageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</ns2:pageSize>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n67b2ca1041a948d5b8c5871049f58577b2">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+    <v:countryname>Belgium</v:countryname>
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+    <v:locality>Ostend</v:locality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426#MR_browsepage">
+    <dcat:contactPoint rdf:nodeID="n5b96a7c1b2f3410eb3e05f446fccad35b1"/>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_browsepage</dct:identifier>
+    <dct:title xml:lang="en">Hierarchical tree gazetteer</dct:title>
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=browser</dcat:endpointURL>
+    <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n45d0b8b8e62745aca9b9018a63b7e65db2">
+    <v:locality>Ostend</v:locality>
+    <v:countryname>Belgium</v:countryname>
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://brugge-ldes.geomobility.eu/observations/by-page/description">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dct:title xml:lang="nl">Verkeerstellingen in Vlaanderen per pagina</dct:title>
+    <dcat:endpointURL rdf:resource="https://brugge-ldes.geomobility.eu/observations/by-page"/>
+    <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:resource="https://geomobility.eu/id/dcat#contact"/>
+    <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
+    <dct:description xml:lang="nl">Default gepagineerde view van de verkeerstellingen in Vlaanderen</dct:description>
+    <dcat:servesDataset rdf:resource="https://brugge-ldes.geomobility.eu/observations"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://brugge-ldes.geomobility.eu/observations/by-page</dct:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n92b05dc80e464f2e983f576c8d2f32c7b2">
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+    <v:locality>Ostend</v:locality>
+    <v:countryname>Belgium</v:countryname>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.designmuseumgent.be/id/exhibitions/billboardseries">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:title xml:lang="nl">dataset met metadata rond billboards die in samenwerking met 019 geproduceerd werden op de banner in de Drabstraat aan Design Museum Gent</dct:title>
+    <mdcat:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:description xml:lang="nl">@fixme PLACEHOLDER</dct:description>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://data.designmuseumgent.be/id/exhibitions/billboardseries</dct:identifier>
+    <dcat:contactPoint rdf:nodeID="n825870be3d5546bba3e60da2590ed055b1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://telraam-api.net/ldes/observations">
+    <dcat:contactPoint rdf:resource="https://telraam.net/id/dcat#contact"/>
+    <dct:conformsTo rdf:resource="https://w3id.org/ldes/specification"/>
+    <dct:conformsTo rdf:resource="https://data.vlaanderen.be/id/concept/dataserviceprotocol/LDES"/>
+    <dct:conformsTo rdf:resource="https://w3id.org/tree/specification"/>
+    <ns2:view rdf:resource="https://telraam-api.net/ldes/observations/by-page"/>
+    <ns2:view rdf:resource="https://telraam-api.net/ldes/observations/by-time"/>
+    <ns2:view rdf:resource="https://telraam-api.net/ldes/observations/by-location"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <ns1:versionOfPath rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
+    <dct:title xml:lang="nl">Telraam LDES voor verkeersmetingen in Vlaanderen</dct:title>
+    <dcat:keyword xml:lang="en">LDES</dcat:keyword>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://telraam-api.net/ldes/observations</dct:identifier>
+    <ns2:shape rdf:nodeID="n78e7fd267e514c08ab429a938d9cf5f3b1"/>
+    <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:description xml:lang="nl">TODO: beschrijving voor Telraam LDES voor verkeersmetingen in Vlaanderen</dct:description>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <ns1:timestampPath rdf:resource="http://www.w3.org/ns/prov#generatedAtTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ror.org/0496vr396">
     <schema1:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISNI:0000000122309672</schema1:identifier>
     <schema1:url>https://www.vliz.be/</schema1:url>
     <schema1:legalName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vlaams Instituut voor de Zee vzw.</schema1:legalName>
@@ -794,30 +292,549 @@
     <schema1:email>info@vliz.be</schema1:email>
     <schema1:alternateName>VLIZ</schema1:alternateName>
     <schema1:logo>http://www.vliz.be/sites/vliz.be/themes/vliz/img/logo.png</schema1:logo>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
     <rdf:type rdf:resource="http://schema.org/Organization"/>
-    <schema1:address>
-      <schema1:PostalAddress rdf:nodeID="na093912105ef4cba8ee9f2609b8da241b1">
-        <schema1:addressLocality>Ostend</schema1:addressLocality>
-        <schema1:postalCode>8400</schema1:postalCode>
-        <schema1:streetAddress>Jacobsenstraat 1</schema1:streetAddress>
-        <schema1:addressCountry>Belgium</schema1:addressCountry>
-      </schema1:PostalAddress>
-    </schema1:address>
-  </dct:Agent>
-  <schema:contactPoint rdf:about="https://telraam.net/id/dcat#contact">
+    <schema1:address rdf:nodeID="nc3e3487530cf4f28b42a60540408b028b1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="na94bf8af593046ecb2051e77c718ffecb2">
+    <v:countryname>Belgium</v:countryname>
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+    <v:locality>Ostend</v:locality>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncd751c5b0c4b4c679803be6620beeb6fb1">
+    <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nca4829326a4d44bfaaf20c2c7f7c3033b2">
+    <v:countryname>Belgium</v:countryname>
+    <v:locality>Ostend</v:locality>
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/dmg/206d69c469151306d018140d6a5345e6">
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/objecten"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/dmg/206d69c469151306d018140d6a5345e6</dct:identifier>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:nodeID="ncd751c5b0c4b4c679803be6620beeb6fb1"/>
+    <dct:title xml:lang="nl">objecten van Design Museum Gent</dct:title>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: Design Museum Gent</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://telraam-api.net/ldes/observations/by-page/description">
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:description xml:lang="nl">Default gepagineerde view van de verkeersmetingen in Vlaanderen</dct:description>
+    <ns2:pageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</ns2:pageSize>
+    <dcat:servesDataset rdf:resource="https://telraam-api.net/ldes/observations"/>
+    <dcat:endpointURL rdf:resource="https://telraam-api.net/ldes/observations/by-page"/>
+    <ns1:retentionPolicy rdf:nodeID="nd46e3e21d4404888b22de11aa8d6bc4bb1"/>
+    <ns2:fragmentationStrategy rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://telraam-api.net/ldes/observations/by-page</dct:identifier>
+    <dct:title xml:lang="nl">Verkeersmetingen in Vlaanderen per pagina</dct:title>
+    <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
+    <dcat:contactPoint rdf:resource="https://telraam.net/id/dcat#contact"/>
+    <rdf:type rdf:resource="https://w3id.org/tree#ViewDescription"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nc3e3487530cf4f28b42a60540408b028b1">
+    <schema1:addressCountry>Belgium</schema1:addressCountry>
+    <schema1:postalCode>8400</schema1:postalCode>
+    <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+    <schema1:streetAddress>Jacobsenstraat 1</schema1:streetAddress>
+    <schema1:addressLocality>Ostend</schema1:addressLocality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nca4829326a4d44bfaaf20c2c7f7c3033b1">
+    <v:hasAdress rdf:nodeID="nca4829326a4d44bfaaf20c2c7f7c3033b2"/>
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n15e36d128de048e482c6538eda728f38b1">
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+    <v:hasAdress rdf:nodeID="n15e36d128de048e482c6538eda728f38b2"/>
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/dmg/2a99e77c8310d43dd49391be12675c80">
+    <dcat:contactPoint rdf:nodeID="ncca50ecbcee34a24868645f8b006a134b1"/>
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/tentoonstellingen"/>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'tentoonstellingen' van de instelling: Design Museum Gent</dct:description>
+    <dct:title xml:lang="nl">tentoonstellingen van Design Museum Gent</dct:title>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/dmg/2a99e77c8310d43dd49391be12675c80</dct:identifier>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions">
+    <ns3:memberType rdf:resource="https://schema.org/TouristAttraction"/>
+    <ns1:versionOfPath rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
+    <dct:title xml:lang="nl">LDES Westtoer producten</dct:title>
+    <ns2:shape rdf:resource="https://westtoer.be/id/shape/touristattractions"/>
+    <ns2:shape rdf:resource="file:///touristattractions/shape"/>
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <ns1:createVersions rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns1:createVersions>
+    <dcat:keyword xml:lang="en">LDES</dcat:keyword>
+    <dct:description xml:lang="nl">Linked Data Event Stream (LDES) voor Westtoer producten</dct:description>
+    <dct:conformsTo rdf:resource="https://w3id.org/ldes/specification"/>
+    <dct:conformsTo rdf:resource="https://w3id.org/tree/specification"/>
+    <ns2:view rdf:resource="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView"/>
+    <dcat:contactPoint rdf:resource="https://westtoer.be/id/contact"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <ns1:timestampPath rdf:resource="http://www.w3.org/ns/prov#generatedAtTime"/>
+    <dct:identifier>https://westtoer.be/id/dataset/ldes-producten</dct:identifier>
+    <ns3:hasDefaultView rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns3:hasDefaultView>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n0b7db8fe74244ced8f5c0b14a4d3ccfdb3">
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+    <v:hasAdress rdf:nodeID="n0b7db8fe74244ced8f5c0b14a4d3ccfdb4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426#MR_SOAPservice">
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_SOAPservice</dct:identifier>
+    <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=soap&amp;wsdl=1</dcat:endpointURL>
+    <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:title xml:lang="en">Marine Regions SOAP service </dct:title>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dcat:contactPoint rdf:nodeID="n92b05dc80e464f2e983f576c8d2f32c7b1"/>
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://telraam-api.net/ldes/observations/by-location/description">
+    <dct:title xml:lang="nl">Verkeersmetingen in Vlaanderen per locatie</dct:title>
+    <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:endpointDescription rdf:resource="https://semiceu.github.io/LinkedDataEventStreams/"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://telraam-api.net/ldes/observations/by-location</dct:identifier>
+    <dct:description xml:lang="nl">View per locatie van de verkeersmetingen in Vlaanderen</dct:description>
+    <dcat:endpointURL rdf:resource="https://telraam-api.net/ldes/observations/by-location"/>
+    <rdf:type rdf:resource="https://w3id.org/tree#ViewDescription"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dcat:contactPoint rdf:resource="https://telraam.net/id/dcat#contact"/>
+    <ns1:retentionPolicy rdf:nodeID="n606386faeb414ff6943a6093713ea7d4b1"/>
+    <ns2:fragmentationStrategy rdf:nodeID="n606386faeb414ff6943a6093713ea7d4b3"/>
+    <ns2:pageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</ns2:pageSize>
+    <dcat:servesDataset rdf:resource="https://telraam-api.net/ldes/observations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n67b2ca1041a948d5b8c5871049f58577b1">
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasAdress rdf:nodeID="n67b2ca1041a948d5b8c5871049f58577b2"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n4cc54b7283e4421b9eccdfdc2affa33db2">
+    <ns2:maxGranularity>hour</ns2:maxGranularity>
+    <ns2:fragmentationPath>http://www.w3.org/ns/prov#generatedAtTime</ns2:fragmentationPath>
+    <rdf:type rdf:resource="https://w3id.org/tree#HierarchicalTimeBasedFragmentation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://telraam.net/id/dcat#contact">
+    <rdf:type rdf:resource="https://schema.org/contactPoint"/>
     <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
     <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://telraam.net/en/contact-us</foaf:page>
     <v:hasEmail rdf:resource="mailto:info@telraam.net"/>
-  </schema:contactPoint>
-  <dct:Standard rdf:about="https://w3id.org/ldes/specification"/>
-  <dct:Standard rdf:about="https://w3id.org/tree/specification"/>
-  <v:Kind rdf:about="https://geomobility.eu/id/dcat#contact">
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="na94bf8af593046ecb2051e77c718ffecb1">
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+    <v:fn>Marine Regions Data Management team</v:fn>
+    <v:hasAdress rdf:nodeID="na94bf8af593046ecb2051e77c718ffecb2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf9f45ce388a84d0cb8da912d15c5b99eb2">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+    <v:countryname>Belgium</v:countryname>
+    <v:locality>Ostend</v:locality>
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/dmg/bcdb28735e86fdacaded956c17f3dc81">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <dcat:contactPoint rdf:nodeID="n6f29762a6f1641058c6c5a1848d191d9b1"/>
+    <dct:title xml:lang="nl">archief van Design Museum Gent</dct:title>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'archief' van de instelling: Design Museum Gent</dct:description>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/archief"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/dmg/bcdb28735e86fdacaded956c17f3dc81</dct:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n0b7db8fe74244ced8f5c0b14a4d3ccfdb1">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+    <loc:geometry rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">&lt;http://www.opengis.net/def/crs/OGC/1.3/CRS84&gt; POLYGON ((&#13;
+			-180.0^^xsd:float	-90.0^^xsd:float&#13;
+			180.0^^xsd:float	90.0^^xsd:float&#13;
+		))</loc:geometry>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView/description">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <rdf:type rdf:resource="https://w3id.org/tree#ViewDescription"/>
+    <dcat:contactPoint rdf:resource="https://westtoer.be/id/contact"/>
+    <dcat:endpointURL rdf:resource="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView"/>
+    <ns2:fragmentationStrategy rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <dct:title xml:lang="nl">Westtoer producten Linked Data Event Stream</dct:title>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:identifier>https://westtoer.be/id/dataservice/touristattractions/latestView</dct:identifier>
+    <dct:description xml:lang="nl">Westtoer producten Linked Data Event Stream</dct:description>
+    <dcat:servesDataset rdf:resource="https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions"/>
+    <ns2:pageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</ns2:pageSize>
+    <dcat:endpointDescription rdf:resource="https://informatievlaanderen.github.io/VSDS-Tech-Docs/introduction/LDES_server"/>
+    <ns1:retentionPolicy rdf:nodeID="n4072f424400f4401b2fefc8f661f48e1b1"/>
+    <dcat:keyword xml:lang="en">LDES</dcat:keyword>
+    <dct:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/hva/5d066834859abadfe6a565a12a35b745">
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/hva/objecten"/>
+    <dcat:contactPoint rdf:nodeID="n2f0e7468025646349b5a4ee4ffcaf776b1"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:title xml:lang="nl">objecten van Het Huis van Alijn (Gent)</dct:title>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/hva/5d066834859abadfe6a565a12a35b745</dct:identifier>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: Het Huis van Alijn (Gent)</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n93df93ccf3a24e499be7091f206f9909b1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasEmail rdf:resource="mailto:collectie.stam@stad.gent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.designmuseumgent.be/id/exhibitions/">
+    <dct:title xml:lang="nl">dataset met metadata rond de tentoonstellingen gerelateerd aan gepubliceerd items uit de collectie van Design Museum Gent.</dct:title>
+    <mdcat:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:description xml:lang="nl">@fixme PLACEHOLDER</dct:description>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://data.designmuseumgent.be/id/objects/</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:nodeID="n652cd03340ea4244b6bd6fe3aae783aab1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://brugge-ldes.geomobility.eu/observations">
+    <dct:conformsTo rdf:resource="https://w3id.org/tree/specification"/>
+    <dct:conformsTo rdf:resource="https://w3id.org/ldes/specification"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://brugge-ldes.geomobility.eu/observations</dct:identifier>
+    <dcat:keyword xml:lang="en">LDES</dcat:keyword>
+    <dct:description xml:lang="nl">TODO: beschrijving voor Geomobility LDES voor verkeerstellingen in Vlaanderen</dct:description>
+    <mdcat:statuut rdf:resource="http://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:title xml:lang="nl">Geomobility LDES voor verkeerstellingen in Vlaanderen</dct:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:resource="https://geomobility.eu/id/dcat#contact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426#MR_GeoRSS">
+    <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_GeoRSS</dct:identifier>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=rss</dcat:endpointURL>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <dcat:contactPoint rdf:nodeID="n45d0b8b8e62745aca9b9018a63b7e65db1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:title xml:lang="en">Marine Regions GeoRSS</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nb52d320b0de347eb8625d509c8f2a019b4">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:related rdf:resource="https://inspire.ec.europa.eu/theme/gn"/>
+    <skos:prefLabel xml:lang="en">Geographical names</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6f29762a6f1641058c6c5a1848d191d9b1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5b96a7c1b2f3410eb3e05f446fccad35b1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <v:hasAdress rdf:nodeID="n5b96a7c1b2f3410eb3e05f446fccad35b2"/>
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426#MR_OGCservice">
+    <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_OGCservice</dct:identifier>
+    <dcat:contactPoint rdf:nodeID="na94bf8af593046ecb2051e77c718ffecb1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dct:title xml:lang="en">Marine Regions OGC service</dct:title>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/webservices.php</dcat:endpointURL>
+    <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n92b05dc80e464f2e983f576c8d2f32c7b1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+    <v:hasAdress rdf:nodeID="n92b05dc80e464f2e983f576c8d2f32c7b2"/>
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n606386faeb414ff6943a6093713ea7d4b1">
+    <rdf:type rdf:resource="https://w3id.org/ldes#DurationAgoPolicy"/>
+    <ns2:value rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P5Y</ns2:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/archiefgent/ea58397710edc2aed8c8303cf52a9cd8">
+    <dct:title xml:lang="nl">objecten van Archief Gent</dct:title>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: Archief Gent</dct:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/archiefgent/ea58397710edc2aed8c8303cf52a9cd8</dct:identifier>
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/archiefgent/objecten"/>
+    <dcat:contactPoint rdf:nodeID="n92b5489ab8f44ec78ea1443735afc16fb1"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n2f0e7468025646349b5a4ee4ffcaf776b1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasEmail rdf:resource="mailto:collectie@gent.be"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/adlib/5d500058200ecaaf8b97bb1bed9fdb94">
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/adlib/5d500058200ecaaf8b97bb1bed9fdb94</dct:identifier>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'personen' van de instelling: Archief Gent, Design Museum Gent, Het Huis van Alijn (Gent), Industriemuseum, STAM (Gent)</dct:description>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:nodeID="nd897f251e4c9450289487843aad36d54b1"/>
+    <dct:title xml:lang="nl">personen van Archief Gent, Design Museum Gent, Het Huis van Alijn (Gent), Industriemuseum, STAM (Gent)</dct:title>
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/adlib/personen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://data.designmuseumgent.be/id/objects/">
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:nodeID="n6b0a171b58944aebbb8871788454638eb1"/>
+    <mdcat:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:description xml:lang="nl">@fixme PLACEHOLDER</dct:description>
+    <dct:title xml:lang="nl">dataset met metadata van reeds gepubliceerde items uit de collectie van het Design Museum Gent.</dct:title>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://data.designmuseumgent.be/id/objects/</dct:identifier>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nb52d320b0de347eb8625d509c8f2a019b1">
+    <v:hasAdress rdf:nodeID="nb52d320b0de347eb8625d509c8f2a019b2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n5b96a7c1b2f3410eb3e05f446fccad35b2">
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+    <v:locality>Ostend</v:locality>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+    <v:countryname>Belgium</v:countryname>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nf9f45ce388a84d0cb8da912d15c5b99eb1">
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+    <v:hasAdress rdf:nodeID="nf9f45ce388a84d0cb8da912d15c5b99eb2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n92b5489ab8f44ec78ea1443735afc16fb1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasEmail rdf:resource="mailto:archief@stad.gent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nbfa80479f607474c976a9d7ae8e2a647b2">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
+    <foaf:name xml:lang="nl">Digitaal Vlaanderen</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/industriemuseum/423276211afbdf9f78f02d580c2dcd58">
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/industriemuseum/objecten"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: Industriemuseum</dct:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dct:title xml:lang="nl">objecten van Industriemuseum</dct:title>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/industriemuseum/423276211afbdf9f78f02d580c2dcd58</dct:identifier>
+    <dcat:contactPoint rdf:nodeID="n306fe477cd80429694d4716176f4789db1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n15e36d128de048e482c6538eda728f38b2">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+    <v:countryname>Belgium</v:countryname>
+    <v:locality>Ostend</v:locality>
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n45d0b8b8e62745aca9b9018a63b7e65db1">
+    <v:hasURL>https://www.marineregions.org/</v:hasURL>
+    <v:hasAdress rdf:nodeID="n45d0b8b8e62745aca9b9018a63b7e65db2"/>
+    <v:hasEmail rdf:resource="mailto:info@marineregions.org"/>
+    <v:organizationname>Vlaams Instituut voor de Zee (VLIZ)</v:organizationname>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:fn>Marine Regions Data Management team</v:fn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n0b7db8fe74244ced8f5c0b14a4d3ccfdb4">
+    <v:locality>Ostend</v:locality>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+    <v:countryname>Belgium</v:countryname>
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1ded9c19d10340af8a592cc5e060b0bab1">
+    <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426#MR_LDES">
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:title xml:lang="en">Marine Regions Linked Data Event Stream</dct:title>
+    <dcat:contactPoint rdf:nodeID="nf9f45ce388a84d0cb8da912d15c5b99eb1"/>
+    <dct:conformsTo rdf:resource="https://data.vlaanderen.be/id/concept/dataserviceprotocol/LDES"/>
+    <dct:conformsTo rdf:resource="https://w3id.org/ldes/specification"/>
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_LDES</dct:identifier>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/feed</dcat:endpointURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/stam/34ee0269ec5b7dc6fb6e8f98a16a2664">
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <dcat:contactPoint rdf:nodeID="n93df93ccf3a24e499be7091f206f9909b1"/>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/stam/34ee0269ec5b7dc6fb6e8f98a16a2664</dct:identifier>
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/stam/objecten"/>
+    <dct:title xml:lang="nl">objecten van STAM (Gent)</dct:title>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'objecten' van de instelling: STAM (Gent)</dct:description>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n4072f424400f4401b2fefc8f661f48e1b1">
+    <rdf:type rdf:resource="https://w3id.org/ldes#LatestVersionSubset"/>
+    <ns1:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ns1:amount>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nb52d320b0de347eb8625d509c8f2a019b2">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <v:postal-code>8400</v:postal-code>
+    <v:countryname>Belgium</v:countryname>
+    <v:locality>Ostend</v:locality>
+    <v:streetaddress>Jacobsenstraat 1</v:streetaddress>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://stad.gent/id/dataset/adlib/91840a139e8b84d77aac0607468a7dd5">
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+    <dcat:contactPoint rdf:nodeID="ne60da0728c3048c69256b3d232762fd8b1"/>
+    <ns2:view rdf:resource="https://apidg.gent.be/opendata/adlib2eventstream/v1/adlib/thesaurus"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdf:type rdf:resource="https://w3id.org/ldes#EventStream"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:description xml:lang="nl">Event stream van de Adlib database 'thesaurus' van de instelling: Archief Gent, Design Museum Gent, Het Huis van Alijn (Gent), Industriemuseum, STAM (Gent)</dct:description>
+    <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://stad.gent/id/dataset/adlib/91840a139e8b84d77aac0607468a7dd5</dct:identifier>
+    <dct:title xml:lang="nl">thesaurus van Archief Gent, Design Museum Gent, Het Huis van Alijn (Gent), Industriemuseum, STAM (Gent)</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/ldes/specification">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n606386faeb414ff6943a6093713ea7d4b3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="n606386faeb414ff6943a6093713ea7d4b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nb52d320b0de347eb8625d509c8f2a019b3">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="en">Bio-geographical regions</skos:prefLabel>
+    <skos:related rdf:resource="https://inspire.ec.europa.eu/theme/br"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n6b0a171b58944aebbb8871788454638eb1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://marineinfo.org/id/dataset/1426#MR_searchpage">
+    <dct:identifier>https://marineinfo.org/id/dataset/1426#MR_searchpage</dct:identifier>
+    <dct:publisher rdf:resource="https://ror.org/0496vr396"/>
+    <ns4:statuut rdf:resource="https://metadata.vlaanderen.be/id/GDI-Vlaanderen-Trefwoorden/VLOPENDATASERVICE"/>
+    <dct:title xml:lang="en">Search page gazetteer</dct:title>
+    <dcat:endpointDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=webservices</dcat:endpointDescription>
+    <dcat:servesDataset rdf:resource="https://marineinfo.org/id/dataset/1426"/>
+    <dct:license rdf:resource="https://data.vlaanderen.be/id/licentie/creative-commons-zero-verklaring/v1.0"/>
+    <dcat:endpointURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.marineregions.org/gazetteer.php?p=search</dcat:endpointURL>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    <dcat:contactPoint rdf:nodeID="n67b2ca1041a948d5b8c5871049f58577b1"/>
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nd897f251e4c9450289487843aad36d54b1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasEmail rdf:resource="mailto:collectie@gent.be"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nd46e3e21d4404888b22de11aa8d6bc4bb1">
+    <ns2:value rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P5Y</ns2:value>
+    <rdf:type rdf:resource="https://w3id.org/ldes#DurationAgoPolicy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n306fe477cd80429694d4716176f4789db1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasEmail rdf:resource="mailto:bibliotheek@industriemuseum.be"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n0b7db8fe74244ced8f5c0b14a4d3ccfdb2">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <schema1:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-12-08T00:00:00+00:00</schema1:startDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tree/specification">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Standard"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n4cc54b7283e4421b9eccdfdc2affa33db1">
+    <rdf:type rdf:resource="https://w3id.org/ldes#DurationAgoPolicy"/>
+    <ns2:value rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P5Y</ns2:value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://geomobility.eu/id/dcat#contact">
     <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.geomobility.eu/en/contact</foaf:page>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
     <v:hasEmail rdf:resource="mailto:hello@geomobility.eu"/>
-  </v:Kind>
-  <v:Kind rdf:about="https://westtoer.be/id/contact">
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ncca50ecbcee34a24868645f8b006a134b1">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n606386faeb414ff6943a6093713ea7d4b2">
+    <ns2:maxZoom>14</ns2:maxZoom>
+    <rdf:type rdf:resource="https://w3id.org/tree#GeospatialFragmentation"/>
+    <ns2:fragmentationPath>http://www.opengis.net/ont/geosparql#asWKT</ns2:fragmentationPath>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://westtoer.be/id/contact">
     <v:hasEmail rdf:resource="mailto:info@westtoer.be"/>
     <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.westtoer.be/over-ons/contact</foaf:page>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
     <rdf:type rdf:resource="http://schema.org/contactPoint"/>
-  </v:Kind>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n652cd03340ea4244b6bd6fe3aae783aab1">
+    <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n825870be3d5546bba3e60da2590ed055b1">
+    <v:hasEmail rdf:resource="mailto:data@designmuseumgent.be"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://stad.gent/">
+    <foaf:name xml:lang="nl">Stad Gent</foaf:name>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ne60da0728c3048c69256b3d232762fd8b1">
+    <v:hasEmail rdf:resource="mailto:collectie@gent.be"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n4cc54b7283e4421b9eccdfdc2affa33db3">
+    <rdf:first rdf:nodeID="n4cc54b7283e4421b9eccdfdc2affa33db2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
 </rdf:RDF>
