@@ -12,7 +12,7 @@ catalogues:
     url: "https://apidg.gent.be/opendata/adlib2eventstream/v1/"
     format: "json-ld"
   westtoer:
-    url: "https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions"
+    url: "https://ca-westtoerwin-nginx-prod.livelyisland-1fa58ea1.westeurope.azurecontainerapps.io/touristattractions"
     format: "turtle"
   telraam:
     url: "https://telraam-api.net/ldes/observations"
