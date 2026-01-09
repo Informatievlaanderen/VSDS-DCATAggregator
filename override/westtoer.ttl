@@ -5,7 +5,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix id: <https://westtoer.be/id/> .
 @prefix introduction: <https://informatievlaanderen.github.io/VSDS-Tech-Docs/introduction/> .
-@prefix latestView: <https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/latestView/> .
+@prefix latestView: <https://ca-westtoerwin-nginx-prod.livelyisland-1fa58ea1.westeurope.azurecontainerapps.io/touristattractions/latestView/> .
 @prefix ldes: <https://w3id.org/ldes#> .
 @prefix metadata-dcat: <https://data.vlaanderen.be/ns/metadata-dcat#> .
 @prefix ns1: <https://w3id.org/tree#> .
@@ -17,7 +17,7 @@
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix shape: <https://westtoer.be/id/shape/> .
 @prefix terms: <http://purl.org/dc/terms/> .
-@prefix touristattractions: <https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions/> .
+@prefix touristattractions: <https://ca-westtoerwin-nginx-prod.livelyisland-1fa58ea1.westeurope.azurecontainerapps.io/touristattractions/> .
 @prefix tree: <https://w3id.org/tree/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -26,7 +26,7 @@
     shacl:closed false ;
     shacl:targetClass schema:TouristAttraction .
 
-<https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions> a dcat:Dataset,
+<https://ca-westtoerwin-nginx-prod.livelyisland-1fa58ea1.westeurope.azurecontainerapps.io/touristattractions> a dcat:Dataset,
         ldes:EventStream ;
     custom:hasDefaultView false ;
     custom:memberType schema:TouristAttraction ;
@@ -57,7 +57,7 @@ latestView:description a dcat:DataService,
     dcat:endpointDescription introduction:LDES_server ;
     dcat:endpointURL touristattractions:latestView ;
     dcat:keyword "LDES"@en ;
-    dcat:servesDataset <https://ca-westtoer-ldes.bluesea-b3dcdb70.westeurope.azurecontainerapps.io/touristattractions> ;
+    dcat:servesDataset <https://ca-westtoerwin-nginx-prod.livelyisland-1fa58ea1.westeurope.azurecontainerapps.io/touristattractions> ;
     metadata-dcat:statuut GDI-Vlaanderen-Trefwoorden:VLOPENDATASERVICE ;
     ldes:retentionPolicy [ a ldes:LatestVersionSubset ;
             ldes:amount 1 ] ;
